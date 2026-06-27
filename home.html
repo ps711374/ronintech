@@ -1,0 +1,443 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Ronin Tech - Cyber Security</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Geist:wght@400;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#00dbe7",
+                        "secondary": "#ddfcff",
+                        "on-secondary-fixed": "#002022",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "surface-container-low": "#1c1b1b",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary": "#00363a",
+                        "on-tertiary": "#313030",
+                        "surface-bright": "#3a3939",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary-container": "#006a70",
+                        "outline-variant": "#5f3e3e",
+                        "on-primary-container": "#5b000f",
+                        "secondary-container": "#00f1fe",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-variant": "#353534",
+                        "surface-container-lowest": "#0e0e0e",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#74f5ff",
+                        "on-primary-fixed-variant": "#92001e",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#ffb3b2",
+                        "on-tertiary-container": "#2a2a2a",
+                        "inverse-primary": "#bf002a",
+                        "surface": "#131313",
+                        "on-surface-variant": "#e9bcba",
+                        "tertiary": "#c8c6c5",
+                        "tertiary-container": "#929090",
+                        "primary-container": "#ff525c",
+                        "on-primary-fixed": "#410008",
+                        "on-primary": "#680012",
+                        "surface-container-highest": "#353534",
+                        "primary-fixed": "#ffdad8",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "surface-dim": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "surface-tint": "#ffb3b2",
+                        "primary": "#ffb3b2",
+                        "background": "#131313",
+                        "surface-container": "#201f1f",
+                        "outline": "#af8786",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-fixed-variant": "#004f54"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Space Grotesk"],
+                        "label-sm": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "body-md": ["Geist"],
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-md": ["Space Grotesk"],
+                        "headline-lg-mobile": ["Space Grotesk"],
+                        "headline-xl": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-mono": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0a0a0a;
+            color: #e5e2e1;
+        }
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glass-panel-hover:hover {
+            box-shadow: 0 0 15px rgba(255, 179, 178, 0.15); /* primary-dim glow */
+        }
+        .btn-primary {
+            border-radius: 0;
+            background-color: #ff525c; /* primary-container */
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            box-shadow: 0 0 20px rgba(255, 82, 92, 0.5);
+            transform: scale(1.02);
+        }
+        .btn-outline {
+            border-radius: 0;
+            background-color: transparent;
+            border: 1px solid #00f1fe; /* secondary-container */
+            color: #00f1fe;
+            transition: all 0.3s ease;
+        }
+        .btn-outline:hover {
+            box-shadow: 0 0 15px rgba(0, 241, 254, 0.3);
+            background-color: rgba(0, 241, 254, 0.05);
+        }
+        .text-glow-primary {
+            text-shadow: 0 0 10px rgba(255, 179, 178, 0.5);
+        }
+        .bg-grid-pattern {
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col relative overflow-x-hidden selection:bg-primary-container selection:text-white overflow-y-auto h-screen">
+<!-- TopNavBar Component -->
+<header class="fixed top-0 w-full bg-surface/80 backdrop-blur-xl border-b border-white/10 flex justify-between items-center h-20 px-margin-desktop z-50"><a href="{{DATA:SCREEN:SCREEN_39}}" class="font-headline-md text-headline-md font-bold tracking-tighter text-primary uppercase">RONIN TECH</a>
+<nav class="hidden md:flex gap-10 items-center">
+    <div class="relative group">
+        <button class="font-body-md text-body-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 flex items-center gap-1">
+            Services
+            <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+        </button>
+        <div class="absolute top-full right-0 mt-2 w-64 glass-panel border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+            <div class="flex flex-col py-2"><a href="{{DATA:SCREEN:SCREEN_27}}" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-secondary-container hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-secondary-container">24/7 Monitoring</a><a href="{{DATA:SCREEN:SCREEN_11}}" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary">Secure Digital Marketing</a><a href="{{DATA:SCREEN:SCREEN_35}}" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-secondary-container hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-secondary-container">Advanced Safety Products</a><a href="{{DATA:SCREEN:SCREEN_5}}" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary">Security Consultation</a><a href="{{DATA:SCREEN:SCREEN_37}}" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-secondary-container hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-secondary-container">Assistance &amp; Training</a></div>
+        </div>
+    </div>
+    <a class="font-body-md text-body-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_7}}">About Us</a>
+    <a href="{{DATA:SCREEN:SCREEN_2}}" class="bg-primary-container text-on-primary-container px-6 py-2 font-bold hover:scale-95 duration-200 transition-transform inline-block">Deploy Defense</a>
+</nav>
+<button class="md:hidden text-primary">
+    <span class="material-symbols-outlined">menu</span>
+</button></header>
+<main class="flex-grow pt-24 md:pt-32">
+<!-- Hero Section -->
+<section class="relative py-16 md:py-24 flex flex-col items-center justify-center px-margin-mobile md:px-margin-desktop bg-grid-pattern">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0 pointer-events-none">
+<img alt="Ronin Tech Background" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIyXURg4hBgq-iBh4kyruPdXujJTFplVomo-XaHv8bQUcQ1fU3j_YkcS1Hw_Eth-zzhVW4Bzqg0KD_vA1keRHR4b_dYL1GMDtW1OOHuVdhNDrJsU3TeCf097IKO7mT6244_KbDB-7C2req4rmcbn-nB8W1UlpugDaturN72QzMO4cs7tzBpr7NXC0Dcr3SIaOi4l5VFq4aqGeeYkFD0u3h-JvxYMxSt--u1imAjhGCLL4C4iaZX3Fk-KAxDGWHl6QxG_mOawOgDC0" style="image-rendering: crisp-edges; width: 100%; height: auto; object-fit: contain;">
+<div class="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-[#0a0a0a]"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center gap-6">
+<h1 class="font-headline-lg-mobile md:font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-surface text-glow-primary">Cybersecurity &amp; AI Solutions for Smarter Businesses</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Elite cyber-defense protocols inspired by ancient discipline, powered by tomorrow's intelligence. Secure your assets against the unseen.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto">
+<button class="btn-primary font-label-mono text-label-mono px-8 py-4 uppercase tracking-widest flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shield</span>
+                        Deploy Defense
+                    </button>
+<button class="btn-outline font-label-mono text-label-mono px-8 py-4 uppercase tracking-widest flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">visibility</span>
+                        Learn More
+                    </button>
+</div>
+</div>
+<!-- Cinematic Animation Placeholder -->
+<div class="relative z-10 w-full max-w-5xl mt-16 aspect-[21/9] overflow-hidden border border-white/10 flex items-center justify-center">
+
+<!-- Assuming a webgl shader for a cinematic data-stream effect -->
+<div class="w-full h-full relative" data-alt="A highly detailed, cinematic visualization of a digital data stream in a dark, cyberpunk environment. Glowing neon-blue and cyber-red code fragments cascade through a deep black void, symbolizing active threat monitoring and advanced cyber defense protocols. The lighting is moody, dramatic, and intensely focused on the glowing data points, creating a sense of elite technological superiority." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC0qAcEAvI839vea9wqAh3s3MhoBE88_bH0KNbbU7r3yYMaM5ZM_-gdfj1X35P403-YZ3sOr9E8NBr5h4zKsjd1Kc1laroOrxlKYjfvCQmF16thc0JkcCpp4CPzgitooc030_t01-g7pU4tCEfBRBoYFWzl4box2KXejjRMVwdtg01y-dhrjYPdxsc6T4UQbVJddeiTJ9QG-DFkFx_fFCmSNgwhNYlt07j49f8UfgBBY-Z6_T7ANmtjnKtFmmt7oc-upJj1eOz8seFe9A&quot;); background-size: cover; background-position: center center;">
+
+</div>
+</div>
+</section>
+<!-- Core Services Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative">
+<div class="absolute top-0 left-margin-desktop w-px h-24 bg-gradient-to-b from-transparent to-primary/30 hidden md:block"></div>
+<div class="mb-16">
+<div class="flex items-center gap-4 mb-4">
+<div class="h-[1px] w-12 bg-secondary-container"></div>
+<span class="font-label-mono text-label-mono text-secondary-container uppercase tracking-widest">Capabilities</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Advanced Protocols</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Card 1 (Featured) -->
+<div class="md:col-span-8 glass-panel glass-panel-hover p-8 md:p-12 flex flex-col justify-between gap-8 relative group">
+<div class="absolute top-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="w-3 h-3 rounded-full bg-error-container animate-pulse"></div>
+</div>
+<div class="w-16 h-16 rounded-none border border-white/10 flex items-center justify-center bg-surface-container-high text-primary group-hover:text-secondary-fixed-dim transition-colors">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">bug_report</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-4 font-bold">Malware Neutralization</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Proactive excision of digital threats before they breach your perimeter. Our advanced heuristic algorithms and AI-driven defense systems identify and eliminate malicious payloads with surgical precision, ensuring your core infrastructure remains uncompromised.</p>
+</div>
+<div class="mt-auto pt-6 border-t border-white/5">
+<a class="font-label-mono text-label-mono text-secondary hover:text-secondary-container flex items-center gap-2 uppercase tracking-widest" href="#">
+                            Initialize Protocol <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<!-- Card 2 -->
+<div class="glass-panel glass-panel-hover p-6 flex flex-col gap-4 relative group flex-1">
+<div class="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="w-2 h-2 rounded-full bg-secondary-container"></div>
+</div>
+<div class="w-10 h-10 rounded-none border border-white/10 flex items-center justify-center bg-surface-container-high text-primary group-hover:text-secondary-fixed-dim transition-colors">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2 font-bold">Ransomware Defense</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Immutable data shielding protocols designed to survive the most aggressive sieges.</p>
+</div>
+<div class="mt-auto pt-4 border-t border-white/5">
+<a class="font-label-mono text-label-mono text-secondary hover:text-secondary-container flex items-center gap-2 uppercase text-[10px]" href="#">
+                                Fortify Assets <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-panel glass-panel-hover p-6 flex flex-col gap-4 relative group flex-1">
+<div class="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="w-2 h-2 rounded-full bg-secondary-container"></div>
+</div>
+<div class="w-10 h-10 rounded-none border border-white/10 flex items-center justify-center bg-surface-container-high text-primary group-hover:text-secondary-fixed-dim transition-colors">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">radar</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2 font-bold">24/7 Threat Monitoring</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Constant vigilance across your digital horizon. Our eyes never close.</p>
+</div>
+<div class="mt-auto pt-4 border-t border-white/5">
+<a class="font-label-mono text-label-mono text-secondary hover:text-secondary-container flex items-center gap-2 uppercase text-[10px]" href="#">
+                                View Radar <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-t border-white/5 relative overflow-hidden">
+<div class="mb-16 flex justify-between items-end">
+<div>
+<div class="flex items-center gap-4 mb-4">
+<div class="h-[1px] w-12 bg-secondary-container"></div>
+<span class="font-label-mono text-label-mono text-secondary-container uppercase tracking-widest">Real-Time Intelligence</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Global Threat Vector</h2>
+</div>
+<div class="flex items-center gap-3 mb-2">
+<div class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></div>
+<span class="font-label-mono text-label-sm text-secondary-container uppercase tracking-widest">Live Status: Active</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter h-auto lg:h-[500px]">
+<!-- Map Visualization Panel -->
+<div class="lg:col-span-8 relative w-full h-[400px] lg:h-full glass-panel border border-white/10 overflow-hidden group">
+<div class="absolute inset-0 bg-grid-pattern opacity-20"></div>
+<div class="absolute inset-0 bg-center bg-cover mix-blend-screen opacity-60" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkxNkpAuuT42wLJljQVNyZ27z_Goyp1ZYA0p3aabtNrADJuafttKXMm92FVYh8QUDn2zk2H6flta1b_1lAqB3TVEv7hZNWlFY-a601ajUd7D-5pSoOoy6CIGBJHE2fHsNCQcfX2b0RJmFNOmlUIQotZNF1GkD-qqhORAJy0OZXz1n57-NMmp9W7aJAYb6jHF3O9qvYuJUA44R4zlmE0fAMKMlUIXkHRsBm371TMUSf1y9UIYXY6DECChQ3qWK1h7Cyt1BSqbi54L8'); filter: hue-rotate(150deg) brightness(0.5) contrast(1.5);"></div>
+<!-- Connection Arcs & Data Points (Simulated with CSS/SVG) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-10" viewBox="0 0 100 100" preserveAspectRatio="none"><circle class="animate-pulse" cx="20%" cy="40%" fill="#00f1fe" r="3"></circle><circle class="animate-pulse" cx="60%" cy="30%" fill="#ff525c" r="4"></circle><circle class="animate-pulse" cx="80%" cy="70%" fill="#00f1fe" r="3"></circle><path class="opacity-40" d="M 20 40 Q 40 10 60 30" fill="none" stroke="#00f1fe" stroke-dasharray="5,5" stroke-width="1"></path><path class="opacity-40" d="M 60 30 Q 70 50 80 70" fill="none" stroke="#ff525c" stroke-dasharray="5,5" stroke-width="1"></path></svg>
+<!-- Scanning Effect -->
+<div class="absolute inset-0 bg-gradient-to-b from-secondary-container/5 to-transparent h-1/2 w-full -translate-y-full animate-[scan_4s_linear_infinite] pointer-events-none"></div>
+</div>
+<!-- Incidents Panel -->
+<div class="lg:col-span-4 glass-panel border border-white/10 p-6 flex flex-col z-20 backdrop-blur-md">
+<div class="flex items-center justify-between mb-6 border-b border-white/10 pb-4">
+<span class="font-label-mono text-sm text-on-surface-variant uppercase tracking-widest">Active Incidents</span>
+<span class="material-symbols-outlined text-secondary-container text-lg">analytics</span>
+</div>
+<div class="space-y-6 font-label-mono text-sm text-secondary-container/80 flex-grow overflow-y-auto pr-2 custom-scrollbar">
+<div class="flex flex-col gap-2 border-l-2 border-secondary-container/50 pl-4 py-1">
+<span class="text-white font-bold">VECTOR: MALWARE-7728 DETECTED</span>
+<span class="opacity-50 text-xs">ORIGIN: HIDDEN // PORT: 443</span>
+</div>
+<div class="flex flex-col gap-2 border-l-2 border-primary/50 pl-4 py-1">
+<span class="text-primary font-bold">ALERT: BRUTE_FORCE_ATTACK</span>
+<span class="opacity-50 text-xs">TARGET: CORE_DB_01</span>
+</div>
+<div class="flex flex-col gap-2 border-l-2 border-secondary-container/50 pl-4 py-1">
+<span class="text-white font-bold">VECTOR: PHISHING_NODE_ISOLATED</span>
+<span class="opacity-50 text-xs">ORIGIN: 192.168.X.X</span>
+</div>
+<div class="flex flex-col gap-2 border-l-2 border-secondary-container/50 pl-4 py-1 opacity-50">
+<span class="text-white font-bold">LOG: ROUTINE_SCAN_COMPLETE</span>
+<span class="opacity-50 text-xs">ALL_SYSTEMS_NOMINAL</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<style>
+@keyframes scan {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(200%); }
+}
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(0, 241, 254, 0.2);
+}
+</style>
+<!-- The Ronin Way Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-t border-white/5 relative overflow-hidden">
+<div class="absolute -right-64 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary-container/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<!-- Image Side -->
+<div class="relative aspect-square md:aspect-[4/3] w-full glass-panel overflow-hidden border border-white/10 p-2">
+<div class="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-primary z-10"></div>
+<div class="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-secondary-container z-10"></div>
+<div class="w-full h-full bg-cover bg-center mix-blend-lighten opacity-80 filter hover:grayscale-0 transition-all duration-700" data-alt="A high-contrast, abstract digital artwork representing the 'Digital Warrior' concept. It features a sleek, futuristic samurai helmet composed of glowing wireframes and fragmented geometric shapes against an ink-black background. Deep cyber-red and neon-blue accents illuminate the edges of the armor, conveying a sense of disciplined, advanced technological protection. The lighting is cinematic and moody, perfect for a high-end cyber security firm." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDlbj-a4KEhfTGakd9Muv9M_WqkP9kqtY03YilE36t16nNtoKk0DLmPitq4SgdtGLJe4mQ_1UdutPdWS8QRKvuJCX77zgs14G9vFu3OKKN5YbLrWI1l0DLb4vB-5TW9uVeIWcIpuRNMsWUSEEsVAgwIdPSOAKKBJjEw6iYbPIJ2GB654jfFY8t90sS8WmcIsOLSi_K1qsR-hcWMw0cRkPFCde0rapUPcxM-TDaCRPrDcmLZtkK5kdqWs68LMFMnG0u1GLkD955LG2Y&quot;); image-rendering: crisp-edges;"></div>
+</div>
+<!-- Text Side -->
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<div class="h-[1px] w-12 bg-primary"></div>
+<span class="font-label-mono text-label-mono text-primary uppercase tracking-widest">Philosophy</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface leading-tight">
+                        The Way of the<br>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-container">Digital Warrior</span>
+</h2>
+<div class="space-y-4">
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                            In a chaotic digital landscape, mere algorithms are not enough. We blend the ancient discipline and unyielding honor of the samurai with cutting-edge cyber-intelligence.
+                        </p>
+<p class="font-body-md text-body-md text-on-surface-variant/80">
+                            Our architecture is designed for high-stakes environments where clarity and rapid response are paramount. We do not just react to threats; we anticipate, isolate, and neutralize them with silent, lethal precision.
+                        </p>
+</div>
+<div class="mt-8 pt-8 border-t border-white/10 flex items-center gap-8">
+<div class="flex flex-col gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">99.9%</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase text-[10px] tracking-wider">Threat Neutralization</span>
+</div>
+<div class="w-px h-12 bg-white/10"></div>
+<div class="flex flex-col gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">0</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase text-[10px] tracking-wider">Breaches Tolerated</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-12 border-t border-white/5 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-4 col-span-1 md:col-span-2 lg:col-span-1">
+<div class="font-headline-sm text-headline-sm font-black text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">security</span>
+                     RONIN TECH
+                </div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-4 opacity-70">
+                    © 2024 RONIN TECH. ALL RIGHTS RESERVED. PROTECTED BY DIGITAL BUSHIDO.
+                </p>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-mono text-label-mono text-on-surface uppercase tracking-widest mb-2 opacity-50">Navigation</span>
+<a class="font-label-sm text-label-sm text-tertiary-fixed-dim hover:text-primary-container transition-colors" href="#">Legal Documentation</a>
+<a class="font-label-sm text-label-sm text-tertiary-fixed-dim hover:text-primary-container transition-colors" href="#">Privacy Shield</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-mono text-label-mono text-on-surface uppercase tracking-widest mb-2 opacity-50">Support</span>
+<a class="font-label-sm text-label-sm text-tertiary-fixed-dim hover:text-primary-container transition-colors" href="#">Contact Command</a>
+<a class="font-label-sm text-label-sm text-tertiary-fixed-dim hover:text-primary-container transition-colors" href="#">System Status</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-mono text-label-mono text-on-surface uppercase tracking-widest mb-2 opacity-50">Status</span>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface">
+<div class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></div>
+                     Systems Operational
+                 </div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple script for input scanning effect on generic inputs (if added later)
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('scanning-active');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.classList.remove('scanning-active');
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

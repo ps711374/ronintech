@@ -1,0 +1,411 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Security Consultation | Ronin Tech</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Geist:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#201f1f",
+                    "primary-fixed": "#ffdad8",
+                    "tertiary-container": "#929090",
+                    "inverse-surface": "#e5e2e1",
+                    "inverse-on-surface": "#313030",
+                    "primary-fixed-dim": "#ffb3b2",
+                    "on-primary": "#680012",
+                    "surface": "#131313",
+                    "surface-dim": "#131313",
+                    "surface-container-low": "#1c1b1b",
+                    "secondary-fixed-dim": "#00dbe7",
+                    "surface-container-lowest": "#0e0e0e",
+                    "tertiary-fixed": "#e5e2e1",
+                    "surface-bright": "#3a3939",
+                    "on-error": "#690005",
+                    "on-secondary-container": "#006a70",
+                    "on-background": "#e5e2e1",
+                    "surface-container-high": "#2a2a2a",
+                    "tertiary": "#c8c6c5",
+                    "on-secondary": "#00363a",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "background": "#131313",
+                    "outline-variant": "#5f3e3e",
+                    "on-secondary-fixed-variant": "#004f54",
+                    "error-container": "#93000a",
+                    "on-surface-variant": "#e9bcba",
+                    "inverse-primary": "#bf002a",
+                    "on-tertiary-container": "#2a2a2a",
+                    "surface-container-highest": "#353534",
+                    "primary": "#ffb3b2",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "outline": "#af8786",
+                    "primary-container": "#ff525c",
+                    "on-primary-fixed-variant": "#92001e",
+                    "surface-tint": "#ffb3b2",
+                    "surface-variant": "#353534",
+                    "secondary": "#ddfcff",
+                    "on-primary-fixed": "#410008",
+                    "error": "#ffb4ab",
+                    "on-tertiary": "#313030",
+                    "on-primary-container": "#5b000f",
+                    "on-secondary-fixed": "#002022",
+                    "on-error-container": "#ffdad6",
+                    "secondary-container": "#00f1fe",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "on-surface": "#e5e2e1",
+                    "secondary-fixed": "#74f5ff",
+                    "ronin-red": "#ff003c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Space Grotesk"],
+                    "headline-lg": ["Space Grotesk"],
+                    "body-md": ["Geist"],
+                    "headline-md": ["Space Grotesk"],
+                    "headline-lg-mobile": ["Space Grotesk"],
+                    "label-mono": ["JetBrains Mono"],
+                    "label-sm": ["Geist"],
+                    "body-lg": ["Geist"]
+            },
+            "fontSize": {
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "label-mono": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0a0a0a;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .ronin-gradient-text {
+            background: linear-gradient(90deg, #ffb3b2, #ff003c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .cyber-grid {
+            background-image: radial-gradient(circle at 2px 2px, rgba(255, 0, 60, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(255, 0, 60, 0.4);
+        }
+        .scanning-bar {
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: linear-gradient(90deg, transparent, #ff003c, transparent);
+            top: 0;
+            left: 0;
+            animation: scan 4s linear infinite;
+        }
+        @keyframes scan {
+            0% { transform: translateY(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(100%); opacity: 0; }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-md selection:bg-ronin-red/30">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full bg-surface/80 backdrop-blur-xl border-b border-white/10 flex justify-between items-center h-20 px-margin-desktop z-50">
+<a class="font-headline-md text-headline-md font-bold tracking-tighter text-primary" href="{{DATA:SCREEN:SCREEN_39}}">RONIN TECH</a>
+<nav class="hidden md:flex gap-10 items-center">
+<div class="relative group">
+<button class="font-body-md text-body-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 flex items-center gap-1 uppercase tracking-wider">
+Services
+<span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute top-full left-0 mt-2 w-64 glass-panel border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+<div class="flex flex-col py-2"><a href="{{DATA:SCREEN:SCREEN_27}}" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary">24/7 Monitoring</a><a href="{{DATA:SCREEN:SCREEN_11}}" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary">Secure Digital Marketing</a><a href="{{DATA:SCREEN:SCREEN_35}}" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary">Advanced Safety Products</a><a href="{{DATA:SCREEN:SCREEN_5}}" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary">Security Consultation</a><a href="{{DATA:SCREEN:SCREEN_37}}" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary">Assistance &amp; Training</a></div>
+</div>
+</div>
+<a class="font-body-md text-body-md text-primary font-medium transition-colors duration-300 uppercase tracking-wider" href="{{DATA:SCREEN:SCREEN_7}}">About Us</a>
+<a href="{{DATA:SCREEN:SCREEN_2}}" class="bg-primary-container text-on-primary-container px-6 py-2 font-bold hover:scale-95 duration-200 transition-transform inline-block">Deploy Defense</a>
+</nav>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="pt-24 cyber-grid">
+<!-- Hero Section -->
+<section class="relative px-margin-desktop py-20 max-w-container-max mx-auto overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-6 z-10">
+<div class="flex items-center gap-2 mb-4">
+<span class="w-2 h-2 rounded-full bg-ronin-red animate-pulse"></span>
+<span class="font-label-mono text-label-mono text-ronin-red uppercase tracking-widest">Advisory Division</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl mb-6">
+                        Security <span class="ronin-gradient-text">Consultation</span>
+</h1>
+<p class="font-headline-md text-headline-md text-on-surface-variant mb-4 font-light">
+                        Your Strategic Roadmap to Cyber Resilience.
+                    </p>
+<p class="font-body-lg text-body-lg text-tertiary mb-10 max-w-xl">
+                        Effective security isn't just about buying software—it’s about strategy, alignment, and compliance. Whether you are prepping for an audit, scaling your infrastructure, or trying to understand your current vulnerabilities, Ronin Tech’s Security Consultation bridges the gap between complex tech and business objectives.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a href="{{DATA:SCREEN:SCREEN_59}}" class="bg-ronin-red text-white px-8 py-4 font-label-mono text-label-mono uppercase tracking-widest hover:brightness-110 transition-all active:scale-95 glow-hover inline-block text-center">
+                            Consult Specialist
+                        </a>
+
+</div>
+</div>
+<div class="lg:col-span-6 relative">
+<div class="glass-panel p-2 rounded-lg relative overflow-hidden group" style="--mouse-x: 604.958984375px; --mouse-y: 159.67724609375px;">
+<div class="scanning-bar"></div>
+<img alt="Cybersecurity Visualization" class="w-full aspect-[1.79] object-cover rounded shadow-2xl" src="https://lh3.googleusercontent.com/aida/AP1WRLv_Dy5753Rk9QhbMB0Ix56g-yJWno7kPk_vJKlwVFHq6ew5AVDzNTi5FXe44sgWP1HJgNRzkoR3kPEQFg2yKlp2WOVSCDNg5fm7hJO74EiBZz04ngG4BfA2XPdDJhnqOQVWF1pMWBQP0_qYC21aAqLfw4H-91MFZSklfEVxWrcgq1RKwsiNK1LziaWcU6QacavHax4YcZDUuC5zhnzYoV2YFKcet0yNln6iYd_J1gK4nlsp1uTnnrT0kVQ">
+<div class="absolute top-4 right-4 flex gap-2">
+<span class="glass-panel px-3 py-1 text-[10px] font-label-mono text-primary uppercase">Active Scan</span>
+<span class="glass-panel px-3 py-1 text-[10px] font-label-mono text-ronin-red uppercase border-ronin-red/20">System Locked</span>
+</div>
+<!-- HUD Decorative Brackets -->
+<div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-ronin-red/40"></div>
+<div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-ronin-red/40"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Capabilities Section -->
+<section class="px-margin-desktop py-32 max-w-container-max mx-auto">
+<div class="mb-20 text-center max-w-3xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg mb-4">Core Strategic <span class="text-ronin-red">Capabilities</span></h2>
+<p class="font-body-lg text-body-lg text-tertiary">Our methodology is rooted in tactical precision, ensuring every recommendation translates into tangible operational security.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Cap 1 -->
+<div class="glass-panel p-10 hover:border-ronin-red/30 transition-all group relative overflow-hidden" style="--mouse-x: 332.96270751953125px; --mouse-y: 74.3843994140625px;">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: &quot;FILL&quot; 0;">analytics</span>
+</div>
+<div class="w-12 h-12 bg-ronin-red/10 border border-ronin-red/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-ronin-red" style="font-variation-settings: &quot;FILL&quot; 1;">security</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 group-hover:text-ronin-red transition-colors">Tailored Risk Assessment</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        We dive deep into your current operations to uncover hidden vulnerabilities, scoring your risks so you know exactly where to allocate resources. No generic reports—only precision-targeted intelligence.
+                    </p>
+<div class="mt-8 pt-8 border-t border-white/5 flex items-center justify-between">
+<span class="font-label-mono text-[10px] uppercase text-tertiary">Capability Module 01</span>
+<span class="w-1.5 h-1.5 bg-ronin-red rounded-full"></span>
+</div>
+</div>
+<!-- Cap 2 -->
+<div class="glass-panel p-10 hover:border-ronin-red/30 transition-all group relative overflow-hidden" style="--mouse-x: 433.958984375px; --mouse-y: 129.3843994140625px;">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: &quot;FILL&quot; 0;">gavel</span>
+</div>
+<div class="w-12 h-12 bg-ronin-red/10 border border-ronin-red/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-ronin-red" style="font-variation-settings: &quot;FILL&quot; 1;">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 group-hover:text-ronin-red transition-colors">Compliance &amp; Regulatory Guidance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Effortlessly meet the stringent requirements of frameworks like GDPR, HIPAA, PCI-DSS, and SOC 2 with our step-by-step guidance. We turn regulatory hurdles into streamlined operational standards.
+                    </p>
+<div class="mt-8 pt-8 border-t border-white/5 flex items-center justify-between">
+<span class="font-label-mono text-[10px] uppercase text-tertiary">Capability Module 02</span>
+<span class="w-1.5 h-1.5 bg-ronin-red rounded-full"></span>
+</div>
+</div>
+<!-- Cap 3 -->
+<div class="glass-panel p-10 hover:border-ronin-red/30 transition-all group relative overflow-hidden" style="--mouse-x: 545.0074653625488px; --mouse-y: 9.0672607421875px;">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: &quot;FILL&quot; 0;">troubleshoot</span>
+</div>
+<div class="w-12 h-12 bg-ronin-red/10 border border-ronin-red/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-ronin-red" style="font-variation-settings: &quot;FILL&quot; 1;">target</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 group-hover:text-ronin-red transition-colors">Strategic Vulnerability Management</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        We don't just find holes; we help you prioritize and patch them based on actual business impact, keeping your operations lean and secure. Focus on what matters, ignore the noise.
+                    </p>
+<div class="mt-8 pt-8 border-t border-white/5 flex items-center justify-between">
+<span class="font-label-mono text-[10px] uppercase text-tertiary">Capability Module 03</span>
+<span class="w-1.5 h-1.5 bg-ronin-red rounded-full"></span>
+</div>
+</div>
+<!-- Cap 4 -->
+<div class="glass-panel p-10 hover:border-ronin-red/30 transition-all group relative overflow-hidden" style="--mouse-x: 373.0037841796875px; --mouse-y: 121.0672607421875px;">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: &quot;FILL&quot; 0;">map</span>
+</div>
+<div class="w-12 h-12 bg-ronin-red/10 border border-ronin-red/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-ronin-red" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 group-hover:text-ronin-red transition-colors">Industry Best Practices</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Receive a clear, executable roadmap designed to mature your security posture, lower insurance premiums, and win trust with major enterprise clients. Practical steps, exceptional results.
+                    </p>
+<div class="mt-8 pt-8 border-t border-white/5 flex items-center justify-between">
+<span class="font-label-mono text-[10px] uppercase text-tertiary">Capability Module 04</span>
+<span class="w-1.5 h-1.5 bg-ronin-red rounded-full"></span>
+</div>
+</div>
+</div>
+</section>
+<!-- Secondary Visual / Infographic Section -->
+<section class="px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7">
+<div class="glass-panel p-2 rounded-lg relative">
+<img alt="Ronin Tech Services Infographic" class="w-full object-cover rounded shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJZSmAOiEUCi50ubU02BkcKovG772rdSXAkVG560DXDytBGVAuOIjH22NYXx0LzXH6D_1MDyQLP_VP2qnh0FZVNIDYDvZr9jDGL4qrJlZ7zTCtcadWwWVuNs-c0ocWBaobmXtEGPMYd8p7l34hMsEzcuyjRa-hm3gqHn9H2Q_QmxuXXiLv0WYDHgJc5Cy030ZOBRPovZYWvahnSGogvq1__XlhVTWzC8RH2rxbvCo2GNwq2rddyWwk5NkW4aGQoauLy7cJ1I94dJs">
+<div class="absolute bottom-4 left-4 glass-panel p-4 max-w-xs border-l-2 border-l-ronin-red">
+<p class="font-label-mono text-[10px] text-tertiary uppercase mb-1">Operational Flow</p>
+<p class="font-body-md text-on-surface text-sm">Visualize the path from vulnerability identification to hardened infrastructure.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 px-8">
+<h2 class="font-headline-lg text-headline-lg mb-6">The <span class="text-ronin-red">Ronin</span> Edge</h2>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<span class="text-ronin-red font-bold font-label-mono">01</span>
+<div>
+<h4 class="font-bold mb-1">Intelligence-Led</h4>
+<p class="text-sm text-tertiary">Decisions based on real-time threat intelligence and deep behavioral analysis.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="text-ronin-red font-bold font-label-mono">02</span>
+<div>
+<h4 class="font-bold mb-1">Zero-Trust Foundations</h4>
+<p class="text-sm text-tertiary">Every consultation builds toward a robust zero-trust architecture.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="text-ronin-red font-bold font-label-mono">03</span>
+<div>
+<h4 class="font-bold mb-1">Rapid Deployment</h4>
+<p class="text-sm text-tertiary">Strategies that can be activated in days, not months.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Closing CTA -->
+<section class="px-margin-desktop py-32 max-w-container-max mx-auto">
+<div class="glass-panel p-16 text-center relative overflow-hidden border-ronin-red/20" style="--mouse-x: 1134.0074653625488px; --mouse-y: 57.373291015625px;">
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-ronin-red/10 rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-ronin-red/5 rounded-full blur-[100px]"></div>
+<h2 class="font-headline-xl text-headline-xl mb-6 relative z-10">Consult with the <span class="ronin-gradient-text">Experts</span>.</h2>
+<p class="font-headline-md text-headline-md text-tertiary mb-10 max-w-3xl mx-auto relative z-10">
+                    Turn cybersecurity from a confusing cost-center into a competitive advantage that wins deals and protects equity.
+                </p>
+<div class="flex justify-center gap-6 relative z-10">
+
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10 w-full relative">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md font-black text-on-surface mb-4">RONIN TECH</div>
+<p class="font-label-mono text-label-mono text-tertiary-container mb-6">
+                    © 2024 RONIN TECH. ALL RIGHTS RESERVED. OPERATIONAL STATUS: SECURE.
+                </p>
+</div>
+<div>
+<h4 class="font-label-mono text-label-mono text-primary uppercase mb-4 tracking-widest">Protocol</h4>
+<ul class="space-y-2">
+<li class=""><a class="font-label-mono text-label-mono text-tertiary-container hover:text-secondary-fixed-dim transition-all" href="#">SLA</a></li>
+<li class=""><a class="font-label-mono text-label-mono text-tertiary-container hover:text-secondary-fixed-dim transition-all" href="#">Bug Bounty</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-mono text-label-mono text-primary uppercase mb-4 tracking-widest">Legal</h4>
+<ul class="space-y-2">
+<li class=""><a class="font-label-mono text-label-mono text-tertiary-container hover:text-secondary-fixed-dim transition-all" href="#">Privacy Policy</a></li>
+<li class=""><a class="font-label-mono text-label-mono text-tertiary-container hover:text-secondary-fixed-dim transition-all" href="#">Terms of Engagement</a></li>
+</ul>
+</div>
+<div class="flex flex-col items-end justify-end">
+<div class="flex gap-4">
+<span class="w-3 h-3 bg-ronin-red/20 border border-ronin-red/40"></span>
+<span class="w-3 h-3 bg-ronin-red/40 border border-ronin-red/60"></span>
+<span class="w-3 h-3 bg-ronin-red/60 border border-ronin-red/80"></span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for glass panels
+        document.querySelectorAll('.glass-panel').forEach(panel => {
+            panel.addEventListener('mousemove', (e) => {
+                const rect = panel.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                panel.style.setProperty('--mouse-x', `${x}px`);
+                panel.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // Simple smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

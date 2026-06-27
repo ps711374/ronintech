@@ -1,0 +1,316 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>About Us | RONIN TECH</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Geist:wght@400;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-container": "#929090",
+                        "primary-container": "#ff525c",
+                        "on-tertiary": "#313030",
+                        "secondary-container": "#00f1fe",
+                        "on-primary": "#680012",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-surface": "#e5e2e1",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-fixed": "#410008",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-secondary-fixed": "#002022",
+                        "outline": "#af8786",
+                        "on-secondary": "#00363a",
+                        "on-primary-container": "#5b000f",
+                        "on-error": "#690005",
+                        "outline-variant": "#5f3e3e",
+                        "surface-container-highest": "#353534",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#92001e",
+                        "surface-variant": "#353534",
+                        "on-secondary-container": "#006a70",
+                        "secondary-fixed": "#74f5ff",
+                        "error-container": "#93000a",
+                        "error": "#ffb4ab",
+                        "primary-fixed-dim": "#ffb3b2",
+                        "surface-bright": "#3a3939",
+                        "secondary-fixed-dim": "#00dbe7",
+                        "on-surface-variant": "#e9bcba",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-tint": "#ffb3b2",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-tertiary-container": "#2a2a2a",
+                        "inverse-on-surface": "#313030",
+                        "secondary": "#ddfcff",
+                        "primary": "#ffb3b2",
+                        "surface": "#131313",
+                        "surface-container": "#201f1f",
+                        "background": "#131313",
+                        "tertiary": "#c8c6c5",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-dim": "#131313",
+                        "primary-fixed": "#ffdad8",
+                        "inverse-primary": "#bf002a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "container-max": "1440px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Space Grotesk"],
+                        "label-sm": ["Geist"],
+                        "headline-lg-mobile": ["Space Grotesk"],
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-xl": ["Space Grotesk"],
+                        "body-md": ["Geist"],
+                        "body-lg": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "label-mono": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0a0a0a;
+            color: #e5e2e1;
+        }
+        .glass-panel {
+            background: #1a1a1a80;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glass-panel-heavy {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+        }
+        .glow-primary {
+            box-shadow: 0 0 15px rgba(255, 179, 178, 0.3);
+        }
+        .glow-secondary {
+            box-shadow: 0 0 15px rgba(0, 219, 231, 0.3);
+        }
+        .border-neon {
+            border: 1px solid #00f1fe;
+        }
+        .text-cyber-red {
+            color: #ff525c;
+        }
+        .bg-cyber-red {
+            background-color: #ff525c;
+        }
+        .sharp-edge {
+            border-radius: 0px;
+        }
+        .cinematic-img {
+            image-rendering: high-quality;
+            image-rendering: crisp-edges;
+        }
+        
+        .grid-bg {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden relative grid-bg" style="overflow-y: auto; height: 100vh;">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full bg-surface/80 backdrop-blur-xl border-b border-white/10 flex justify-between items-center h-20 px-margin-desktop z-50">
+<a href="{{DATA:SCREEN:SCREEN_39}}" class="font-headline-md text-headline-md font-bold tracking-tighter text-primary">RONIN TECH</a><nav class="hidden md:flex gap-10 items-center"><div class="relative group">
+    <button class="font-body-md text-body-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 flex items-center gap-1">
+        Services
+        <span class="material-symbols-outlined text-sm">expand_more</span>
+    </button>
+    <div class="absolute top-full right-0 mt-2 w-64 glass-panel border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+        <div class="flex flex-col"><a href="{{DATA:SCREEN:SCREEN_27}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary border-b border-white/5 transition-colors">24/7 MONITORING</a><a href="{{DATA:SCREEN:SCREEN_11}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary border-b border-white/5 transition-colors">SECURE DIGITAL MARKETING</a><a href="{{DATA:SCREEN:SCREEN_35}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary border-b border-white/5 transition-colors">ADVANCED SAFETY PRODUCTS</a><a href="{{DATA:SCREEN:SCREEN_5}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary border-b border-white/5 transition-colors">SECURITY CONSULTATION</a><a href="{{DATA:SCREEN:SCREEN_37}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors">ASSISTANCE &amp; TRAINING</a></div>
+    </div>
+</div>
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1 transition-all duration-300" href="{{DATA:SCREEN:SCREEN_7}}">About Us</a>
+<a href="{{DATA:SCREEN:SCREEN_2}}" class="bg-primary-container text-on-primary-container px-6 py-2 font-bold hover:scale-95 duration-200 transition-transform inline-block">Deploy Defense</a></nav><button class="md:hidden text-primary"><span class="material-symbols-outlined">menu</span></button>
+</header>
+<main class="pt-32 pb-20">
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 w-full h-full">
+<img alt="Digital Warrior samurai imagery" class="w-full h-full object-cover cinematic-img opacity-40 mix-blend-luminosity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEfcnUFOqwEilJyzbNJSucZg0Cbe9QswXiiK0jqS_O5-m1Sn7t0YOoJHMeZBQz3bXapUVb2N_fapvypj9u80ZxRwizIIZsnXDFV1NtyKHoAHF-eTuXG94w6T9tN5hyO2O9OOCHrOeV6jvdLXwKKEI7HzJPuWEosKWQQRyMw6R3wG4R9YQODzR1V89YemGxj2LNJkdTGOM-PWj3LdP6kM4ptxenNqy0S0u1gbmJvckNgnivwiT7oZmbt5PXdRJFyNIxsAHShl1UwJU">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/50 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center md:text-left flex flex-col items-center md:items-start w-full">
+<div class="inline-flex items-center space-x-2 mb-6 border border-white/10 bg-black/50 backdrop-blur-md px-4 py-1.5 sharp-edge">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+<span class="font-label-mono text-label-sm text-primary tracking-widest uppercase">Protocol Alpha Initiated</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl md:text-[80px] font-bold text-on-surface mb-6 max-w-4xl leading-tight">
+                    The Way of <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">Digital Bushido</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-10 border-l-2 border-primary pl-6">
+                    We bring ancient honor, relentless discipline, and elite protection to the lawless cyber-frontier. Your data is our master; we defend it with absolute silence and lethal precision.
+                </p>
+
+</div>
+<!-- HUD Elements -->
+<div class="absolute top-1/4 right-[10%] hidden lg:flex flex-col items-end space-y-2 opacity-50 font-label-mono text-[10px] text-secondary-fixed-dim">
+<span class="">[ SYS.DEF : ACTIVE ]</span>
+<span class="">[ TGT.LCK : VERIFIED ]</span>
+<div class="w-16 h-[1px] bg-secondary-fixed-dim/50 my-2"></div>
+<span class="">45.9812° N, 12.3341° E</span>
+</div>
+<div class="absolute bottom-10 left-margin-desktop opacity-30">
+<svg class="text-primary" fill="none" height="40" stroke="currentColor" viewBox="0 0 40 40" width="40">
+<path d="M0 0v10M0 0h10M40 0v10M40 0h-10M0 40v-10M0 40h10M40 40v-10M40 40h-10" stroke-width="2"></path>
+</svg>
+</div>
+</section>
+<!-- Mission / Bento Grid -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Philosophy Card -->
+<div class="lg:col-span-5 glass-panel p-8 md:p-12 relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-transparent"></div>
+<div class="absolute top-4 right-4 flex space-x-1">
+<span class="w-1 h-4 bg-white/20 group-hover:bg-primary transition-colors"></span>
+<span class="w-1 h-4 bg-white/20 group-hover:bg-primary transition-colors delay-75"></span>
+<span class="w-1 h-4 bg-white/20 group-hover:bg-primary transition-colors delay-150"></span>
+</div>
+<h2 class="font-label-mono text-label-mono text-primary mb-4 uppercase tracking-widest">Philosophy</h2>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">The Ronin Way</h3>
+<p class="font-body-md text-on-surface-variant mb-6 text-justify">
+                        In an era of automated chaos, we remain steadfast. The Ronin Philosophy marries the uncompromising code of the samurai with state-of-the-art cryptographic architecture. We are not just vendors; we are digital sworn protectors.
+                    </p>
+<p class="font-body-md text-on-surface-variant text-justify">
+                        Every line of code is forged like a blade—folded, tested, and honed for a single purpose: to cut through vulnerabilities before they manifest.
+                    </p>
+</div>
+<!-- Arsenal Image Card -->
+<div class="lg:col-span-7 glass-panel p-2 relative min-h-[400px]">
+<div class="absolute inset-4 z-10 pointer-events-none border border-white/5 flex flex-col justify-between p-6">
+<div class="flex justify-between items-center">
+<span class="font-label-mono text-[10px] bg-black/80 px-2 py-1 text-secondary-fixed-dim border border-secondary-fixed-dim/30">MODULE_ARSENAL</span>
+<span class="material-symbols-outlined text-secondary-fixed-dim text-sm">visibility</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-white bg-black/60 inline-block px-3 py-1 backdrop-blur-sm">Operational Excellence</h3>
+</div>
+</div>
+<img alt="Informative services infographic for Ronin" class="w-full h-full object-cover cinematic-img filter grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJULc2F7vg82R7A4jfFSjt01gN7-m8k5Z6F_btkH64aWQtFQg7tYFhegT0pd5pzTqHFg-2u8MhlqgHPFCFefo9qmRhtskxf-WOnF7kaVo2wgSK5KfJtDXZbtU6CxAlR4WouVUzE-T5DqzKXFd3lKv0AOQoW-Nxs4Bgsj9-9NN5SVpG0MOVNTqPTgtNkxEEYVAOGo9x9UHpL_YGHQYaS7vzSO3DZKOkUwyle0Y1zf7Yh7ZD9OSjgMtM587XiFMiv1Un0Em2dPez5to">
+</div>
+</div>
+</section>
+<!-- Values Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-t border-white/5 relative bg-surface-container-low/30">
+<div class="text-center mb-16">
+<span class="font-label-mono text-label-sm text-secondary-fixed-dim uppercase tracking-widest mb-2 block">Core Directives</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">The Triad of Defense</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Value 1 -->
+<div class="glass-panel p-8 relative hover:-translate-y-2 transition-transform duration-300 border-t border-t-transparent hover:border-t-primary">
+<div class="w-12 h-12 mb-6 border border-primary/30 flex items-center justify-center bg-primary/5 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">security</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-3">Unwavering Honor</h4>
+<p class="font-body-md text-on-surface-variant">
+                        Absolute integrity in data handling. We swear a digital oath to protect client assets above all else, operating with total transparency to our masters.
+                    </p>
+</div>
+<!-- Value 2 -->
+<div class="glass-panel p-8 relative hover:-translate-y-2 transition-transform duration-300 border-t border-t-transparent hover:border-t-secondary-fixed-dim">
+<div class="w-12 h-12 mb-6 border border-secondary-fixed-dim/30 flex items-center justify-center bg-secondary-fixed-dim/5 text-secondary-fixed-dim">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">bolt</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-3">Silent Precision</h4>
+<p class="font-body-md text-on-surface-variant">
+                        Threats are neutralized with surgical efficiency. We operate in the shadows, ensuring zero disruption to your operational flow while maintaining absolute security.
+                    </p>
+</div>
+<!-- Value 3 -->
+<div class="glass-panel p-8 relative hover:-translate-y-2 transition-transform duration-300 border-t border-t-transparent hover:border-t-white">
+<div class="w-12 h-12 mb-6 border border-white/30 flex items-center justify-center bg-white/5 text-white">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">radar</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-3">Eternal Vigilance</h4>
+<p class="font-body-md text-on-surface-variant">
+                        24/7/365 active monitoring. The digital realm never sleeps, and neither do our sentinels. We maintain a persistent state of readiness against zero-day threats.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Technical Heritage -->
+
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-12 border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="col-span-1 lg:col-span-1">
+<div class="font-headline-sm text-headline-sm font-black text-on-surface mb-4"><a href="{{DATA:SCREEN:SCREEN_36}}" class="hover:text-primary transition-colors">RONIN TECH</a></div>
+<p class="font-label-sm text-label-sm text-tertiary-fixed-dim mt-8">
+                    © 2024 RONIN TECH. ALL RIGHTS RESERVED. PROTECTED BY DIGITAL BUSHIDO.
+                </p>
+</div>
+<div class="flex flex-col space-y-4">
+<span class="font-label-mono text-label-mono text-on-surface/50 mb-2">Systems</span>
+<a class="font-body-md text-body-md text-tertiary-fixed-dim hover:text-primary-container transition-colors" href="#">System Status</a>
+<a class="font-body-md text-body-md text-tertiary-fixed-dim hover:text-primary-container transition-colors" href="{{DATA:SCREEN:SCREEN_2}}">Contact Command</a>
+</div>
+<div class="flex flex-col space-y-4">
+<span class="font-label-mono text-label-mono text-on-surface/50 mb-2">Operations</span>
+<a class="font-body-md text-body-md text-tertiary-fixed-dim hover:text-primary-container transition-colors" href="#">Legal Documentation</a>
+<a class="font-body-md text-body-md text-tertiary-fixed-dim hover:text-primary-container transition-colors" href="#">Privacy Shield</a>
+</div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>RONIN TECH | Advanced Safety Products</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Geist:wght@400;600&amp;display=swap" rel="stylesheet">
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Scripts -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#00dbe7",
+                        "secondary": "#ddfcff",
+                        "on-secondary-fixed": "#002022",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "surface-container-low": "#1c1b1b",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary": "#00363a",
+                        "on-tertiary": "#313030",
+                        "surface-bright": "#3a3939",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary-container": "#006a70",
+                        "outline-variant": "#5f3e3e",
+                        "on-primary-container": "#5b000f",
+                        "secondary-container": "#00f1fe",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-variant": "#353534",
+                        "surface-container-lowest": "#0e0e0e",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#74f5ff",
+                        "on-primary-fixed-variant": "#92001e",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#ffb3b2",
+                        "on-tertiary-container": "#2a2a2a",
+                        "inverse-primary": "#bf002a",
+                        "surface": "#131313",
+                        "on-surface-variant": "#e9bcba",
+                        "tertiary": "#c8c6c5",
+                        "tertiary-container": "#929090",
+                        "primary-container": "#ff525c",
+                        "on-primary-fixed": "#410008",
+                        "on-primary": "#680012",
+                        "surface-container-highest": "#353534",
+                        "primary-fixed": "#ffdad8",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "surface-dim": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "surface-tint": "#ffb3b2",
+                        "primary": "#ff003c",
+                        "background": "#0a0a0a",
+                        "surface-container": "#201f1f",
+                        "outline": "#af8786",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-fixed-variant": "#004f54"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Space Grotesk"],
+                        "label-sm": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "body-md": ["Geist"],
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-md": ["Space Grotesk"],
+                        "headline-lg-mobile": ["Space Grotesk"],
+                        "headline-xl": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-mono": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        };
+    </script>
+<style>
+        body { background-color: #0a0a0a; color: #e5e2e1; }
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .cyber-red-glow {
+            box-shadow: 0 0 20px rgba(255, 0, 60, 0.3);
+        }
+        .btn-primary {
+            background-color: #ff003c;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            box-shadow: 0 0 20px rgba(255, 0, 60, 0.5);
+            transform: scale(1.02);
+        }
+        .bg-grid-pattern {
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .hud-bracket-tl { border-top: 2px solid #ff003c; border-left: 2px solid #ff003c; width: 12px; height: 12px; position: absolute; top: 0; left: 0; }
+        .hud-bracket-br { border-bottom: 2px solid #00dbe7; border-right: 2px solid #00dbe7; width: 12px; height: 12px; position: absolute; bottom: 0; right: 0; }
+        .scan-line {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ff003c, transparent);
+            position: absolute;
+            top: 0;
+            left: -100%;
+            animation: scanning 3s linear infinite;
+        }
+        @keyframes scanning {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden selection:bg-primary-container selection:text-white bg-grid-pattern">
+<!-- Navigation (Synchronized with SCREEN_40) -->
+<header class="fixed top-0 w-full bg-surface/80 backdrop-blur-xl border-b border-white/10 flex justify-between items-center h-20 px-margin-desktop z-50">
+<a class="font-headline-md font-bold tracking-tighter text-primary uppercase" href="{{DATA:SCREEN:SCREEN_40}}">RONIN TECH</a>
+<nav class="hidden md:flex gap-10 items-center">
+<div class="relative group">
+<button class="font-body-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 flex items-center gap-1">
+                Services
+                <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute top-full right-0 mt-2 w-72 glass-panel border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+<div class="flex flex-col py-2">
+<a class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-secondary-container hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-secondary-container" href="{{DATA:SCREEN:SCREEN_27}}">24/7 Monitoring</a>
+<a class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary" href="{{DATA:SCREEN:SCREEN_11}}">Secure Digital Marketing</a>
+<a class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-secondary-container hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-secondary-container" href="{{DATA:SCREEN:SCREEN_35}}">Advanced Safety Products</a>
+<a class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary" href="{{DATA:SCREEN:SCREEN_5}}">Security Consultation</a>
+<a class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-secondary-container hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-secondary-container" href="{{DATA:SCREEN:SCREEN_37}}">Assistance &amp; Training</a>
+</div>
+</div>
+</div>
+<a class="font-body-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_7}}">About Us</a>
+<a class="bg-primary-container text-white px-6 py-2 font-bold hover:scale-95 duration-200 transition-transform inline-block cyber-red-glow" href="{{DATA:SCREEN:SCREEN_2}}">DEPLOY DEFENSE</a>
+</nav>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex-grow pt-32 pb-20">
+<!-- Hero Section -->
+<section class="relative px-margin-desktop max-w-container-max mx-auto mb-24 overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 bg-surface-container-low px-3 py-1 border border-white/10 rounded-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-mono text-label-sm uppercase tracking-widest text-primary">Advanced Safety Protocol Active</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface leading-tight">
+                    Future-Proof <span class="text-primary">Infrastructure</span> Built for Enterprise Resilience.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Standard antivirus and basic firewalls are no longer enough. Ronin Tech deploys custom-tailored hardware and software solutions engineered to withstand aggressive attacks.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+
+</div>
+</div>
+<div class="relative">
+<div class="glass-panel p-6 relative overflow-hidden">
+<div class="hud-bracket-tl"></div>
+<div class="hud-bracket-br"></div>
+<div class="scan-line"></div>
+<div class="aspect-video bg-black/60 relative border border-white/5 overflow-hidden">
+<img alt="High-fidelity server room" class="w-full h-full object-cover mix-blend-lighten opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGYWuq5fRq16JUUIM26cWlrLZgOYWbXzdFk2LNE0hBUYaE3Q1wuFNDocAiTWjkotBwCuzchw1eX_beYA3NgqrvYdQY-ZpSCa94QDfDeWHZGXNYHlOhkz2PNnlIerzBPPf2oOr6lQMEzb_HXjO5e5KNzww_ZWpAzw7XL6p5c_MG272hjgluDJLeFKHSaX_KYdZ5lSu_5ngjk_fPrCeFM0fGKmOi6UCKNZD312eN-Bk3NUdssanR_NdiCLNnxt92DFijNaZmz9fSgGI">
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-8xl text-primary/30" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+</div>
+<div class="mt-6 flex justify-between items-end px-2">
+<div>
+<p class="font-label-mono text-label-sm text-on-surface-variant uppercase mb-1">Defense Vector Alpha</p>
+<p class="font-headline-md text-headline-md font-bold text-on-surface">99.9% UPTIME</p>
+</div>
+<div class="text-right">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-4xl animate-pulse">radar</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Capabilities Bento -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto border-t border-white/5">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Core Capabilities</h2>
+<div class="w-24 h-1 bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Cap 1 -->
+<div class="glass-panel p-8 group hover:border-primary/50 transition-all duration-500 flex flex-col">
+<div class="text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">security_update_good</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Next-Gen Firewalls (NGFW)</h3>
+<p class="text-on-surface-variant font-body-md mb-8">Deep-packet inspection and advanced threat intelligence integration to stop threats before they breach your perimeter.</p>
+<ul class="space-y-3 font-label-mono text-label-sm text-secondary-fixed-dim mt-auto">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary-fixed-dim rounded-full"></span> AI-Driven Filtering</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary-fixed-dim rounded-full"></span> Malware Sandboxing</li>
+</ul>
+</div>
+<!-- Cap 2 -->
+<div class="glass-panel p-8 group hover:border-secondary-fixed-dim/50 transition-all duration-500 flex flex-col">
+<div class="text-secondary-fixed-dim mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">vpn_lock</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Encrypted Communication</h3>
+<p class="text-on-surface-variant font-body-md mb-8">Military-grade encryption protocols for internal data transit, ensuring end-to-end confidentiality across all nodes.</p>
+<ul class="space-y-3 font-label-mono text-label-sm text-primary mt-auto">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> AES-256 Quantum Resistant</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Stealth Network Layering</li>
+</ul>
+</div>
+<!-- Cap 3 -->
+<div class="glass-panel p-8 group hover:border-primary/50 transition-all duration-500 flex flex-col">
+<div class="text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">admin_panel_settings</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Zero-Trust Architecture</h3>
+<p class="text-on-surface-variant font-body-md mb-8">Strict identity verification frameworks that eliminate implicit trust within the corporate ecosystem.</p>
+<ul class="space-y-3 font-label-mono text-label-sm text-secondary-fixed-dim mt-auto">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary-fixed-dim rounded-full"></span> Multi-Factor Bio-Auth</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary-fixed-dim rounded-full"></span> Least Privilege Access</li>
+</ul>
+</div>
+<!-- Cap 4 -->
+<div class="glass-panel p-8 group hover:border-secondary-fixed-dim/50 transition-all duration-500 flex flex-col">
+<div class="text-secondary-fixed-dim mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">router</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Fortified Deployment</h3>
+<p class="text-on-surface-variant font-body-md mb-8">Hardened routers and endpoints engineered with custom firmware to resist hardware-level tampering.</p>
+<ul class="space-y-3 font-label-mono text-label-sm text-primary mt-auto">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Hardened OS Kernels</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Secure Boot Chain</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Technical Details / Terminal Section -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto border-t border-white/5">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-7">
+<div class="bg-surface-container-lowest border border-white/10 rounded-lg overflow-hidden shadow-2xl">
+<div class="flex items-center justify-between p-4 border-b border-white/10 bg-surface-container-low">
+<span class="font-label-mono text-label-sm uppercase tracking-widest text-on-surface opacity-70">Terminal / INFRA-CORE / 04</span>
+<div class="flex gap-2">
+<div class="w-3 h-3 rounded-full bg-white/10"></div>
+<div class="w-3 h-3 rounded-full bg-white/10"></div>
+<div class="w-3 h-3 rounded-full bg-primary animate-pulse"></div>
+</div>
+</div>
+<div class="p-8 font-label-mono text-sm space-y-4 h-[440px] overflow-hidden bg-black/90">
+<p class="text-secondary-fixed-dim">[INITIATING DEFENSE SEQUENCE]</p>
+<p class="text-on-surface-variant/80">&gt; Loading Secure Kernel Modules...</p>
+<p class="text-on-surface-variant/80">&gt; Scanning External Ports: 80, 443, 22, 1194 [SECURE]</p>
+<p class="text-on-surface-variant/80">&gt; Identity Vault Status: <span class="text-primary underline">LOCKED</span></p>
+<p class="text-on-surface-variant/80">&gt; Encryption Protocol: AES-256-GCM [ACTIVE]</p>
+<div class="text-primary bg-primary/10 px-2 py-1 inline-block border-l-2 border-primary">&gt; THREAT DETECTED: UNKNOWN NODE ATTEMPTING HANDSHAKE</div>
+<p class="text-on-surface-variant/80">&gt; Applying Policy: AUTO_SHIELD_09</p>
+<p class="text-on-surface-variant/80">&gt; Node Isolated. Logging Packet Data...</p>
+<div class="w-full bg-white/5 h-1.5 relative rounded-full overflow-hidden mt-6">
+<div class="bg-primary h-full transition-all duration-300" id="progress-bar" style="width: 79%;"></div>
+</div>
+<p class="text-secondary-fixed-dim mt-4">SYSTEM STATUS: PROTECTED</p>
+<div class="pt-8 opacity-10 flex justify-center">
+<span class="material-symbols-outlined text-[160px]">fingerprint</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 space-y-12">
+<div>
+<h4 class="font-label-mono text-label-mono text-primary uppercase tracking-widest mb-4">Technical Superiority</h4>
+<h2 class="font-headline-lg text-headline-lg text-on-surface leading-tight">Engineered for the Modern Threat Landscape.</h2>
+</div>
+<div class="space-y-8">
+<div class="flex gap-6 items-start group">
+<div class="w-12 h-12 flex-shrink-0 flex items-center justify-center border border-primary text-primary font-bold group-hover:bg-primary group-hover:text-white transition-all">01</div>
+<div>
+<h5 class="font-headline-md text-headline-md text-on-surface mb-2">Dynamic Threat Adaptation</h5>
+<p class="text-on-surface-variant">Our infrastructure evolves. Using real-time telemetry, systems automatically reconfigure to neutralize zero-day vulnerabilities.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start group">
+<div class="w-12 h-12 flex-shrink-0 flex items-center justify-center border border-secondary-fixed-dim text-secondary-fixed-dim font-bold group-hover:bg-secondary-fixed-dim group-hover:text-black transition-all">02</div>
+<div>
+<h5 class="font-headline-md text-headline-md text-on-surface mb-2">Hardened Silicon Roots</h5>
+<p class="text-on-surface-variant">We utilize TPM and secure enclaves at the hardware level to ensure primary encryption keys are isolated from software-level attacks.</p>
+</div>
+</div>
+</div>
+<div class="p-8 bg-surface-container-high border-l-4 border-primary relative overflow-hidden group">
+<div class="absolute right-0 top-0 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-9xl -mr-10 -mt-10">format_quote</span>
+</div>
+<p class="italic text-on-surface font-body-lg relative z-10">"The transition to Ronin Tech's zero-trust hardware eliminated 94% of lateral movement threats in our data center within 30 days."</p>
+<p class="mt-4 font-label-mono text-label-sm text-primary uppercase relative z-10 tracking-widest">— CTO, Vanguard Dynamics</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 px-margin-desktop max-w-container-max mx-auto text-center relative">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,0,60,0.1)_0%,transparent_70%)]"></div>
+<div class="relative z-10 max-w-3xl mx-auto">
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-8">Ready to Secure Your Future?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Join the network of elite enterprises protected by Digital Bushido. Our specialists are ready to design your defense blueprint.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+
+
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Synchronized with Aesthetic) -->
+<footer class="bg-surface-container-lowest w-full py-16 border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-6">
+<span class="font-headline-md font-bold text-on-surface block uppercase tracking-tighter">RONIN TECH</span>
+<p class="font-body-md text-on-surface-variant">Global leadership in elite cybersecurity solutions, driven by precision and the code of digital honor.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">share</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">terminal</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">hub</span>
+</div>
+</div>
+<div class="space-y-4">
+<h6 class="font-label-mono text-on-surface uppercase font-bold tracking-widest opacity-50">Solutions</h6>
+<nav class="flex flex-col gap-3">
+<a class="font-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_27}}">Digital Defense</a>
+<a class="font-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_35}}">Advanced Hardware</a>
+<a class="font-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_11}}">Threat Intel</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h6 class="font-label-mono text-on-surface uppercase font-bold tracking-widest opacity-50">Company</h6>
+<nav class="flex flex-col gap-3">
+<a class="font-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_7}}">About Ronin</a>
+<a class="font-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors" href="#">Privacy Shield</a>
+<div class="flex items-center gap-2 font-label-sm text-secondary-container">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></div>
+                    Systems Operational
+                </div>
+</nav>
+</div>
+<div class="space-y-4">
+<h6 class="font-label-mono text-on-surface uppercase font-bold tracking-widest opacity-50">Resources</h6>
+<nav class="flex flex-col gap-3">
+<a class="font-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors" href="#">Whitepapers</a>
+<a class="font-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors" href="#">API Docs</a>
+<a class="font-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_37}}">Command Support</a>
+</nav>
+</div>
+</div>
+<div class="mt-16 px-margin-desktop max-w-container-max mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-sm text-on-surface-variant uppercase tracking-widest text-[10px]">
+            © 2024 RONIN TECH. ALL RIGHTS RESERVED. PROTECTED BY DIGITAL BUSHIDO.
+        </p>
+<div class="flex gap-8">
+<a class="font-label-sm text-tertiary-fixed-dim hover:text-on-surface uppercase tracking-widest" href="#">Legal</a>
+<a class="font-label-sm text-tertiary-fixed-dim hover:text-on-surface uppercase tracking-widest" href="#">Security</a>
+</div>
+</div>
+</footer>
+<script>
+    // Terminal progress bar simulation logic
+    const progressBar = document.getElementById('progress-bar');
+    if (progressBar) {
+        setInterval(() => {
+            let width = parseInt(progressBar.style.width);
+            if (width > 98) {
+                width = 70;
+            } else {
+                width += Math.floor(Math.random() * 5) + 1;
+                if (width > 99) width = 99;
+            }
+            progressBar.style.width = width + '%';
+        }, 3000);
+    }
+
+    // Scroll effect for header
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('bg-surface/95', 'shadow-2xl');
+        } else {
+            header.classList.remove('bg-surface/95', 'shadow-2xl');
+        }
+    });
+</script>
+
+
+</body></html>

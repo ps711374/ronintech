@@ -1,0 +1,429 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>RONIN TECH | Secure Digital Marketing Ecosystem</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Geist:wght@100;300;400;500;600;700&amp;family=JetBrains+Mono:wght@100;300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#131313",
+                    "secondary-fixed-dim": "#00dbe7",
+                    "background": "#131313",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "on-secondary": "#00363a",
+                    "on-primary-fixed-variant": "#92001e",
+                    "error": "#ffb4ab",
+                    "on-surface": "#e5e2e1",
+                    "on-primary-container": "#5b000f",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container-high": "#2a2a2a",
+                    "on-tertiary-container": "#2a2a2a",
+                    "secondary": "#ddfcff",
+                    "primary-fixed": "#ffdad8",
+                    "surface-container-highest": "#353534",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-fixed": "#e5e2e1",
+                    "surface-container": "#201f1f",
+                    "outline-variant": "#5f3e3e",
+                    "on-secondary-fixed-variant": "#004f54",
+                    "surface-tint": "#ffb3b2",
+                    "primary-container": "#ff525c",
+                    "secondary-fixed": "#74f5ff",
+                    "inverse-surface": "#e5e2e1",
+                    "on-secondary-fixed": "#002022",
+                    "surface-variant": "#353534",
+                    "surface": "#131313",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-primary": "#680012",
+                    "error-container": "#93000a",
+                    "on-background": "#e5e2e1",
+                    "on-secondary-container": "#006a70",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "on-surface-variant": "#e9bcba",
+                    "primary": "#ffb3b2",
+                    "on-primary-fixed": "#410008",
+                    "tertiary-container": "#929090",
+                    "surface-bright": "#3a3939",
+                    "inverse-on-surface": "#313030",
+                    "secondary-container": "#00f1fe",
+                    "inverse-primary": "#bf002a",
+                    "on-tertiary": "#313030",
+                    "outline": "#af8786",
+                    "primary-fixed-dim": "#ffb3b2",
+                    "on-error": "#690005",
+                    "tertiary": "#c8c6c5",
+                    "on-tertiary-fixed": "#1c1b1b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "base": "8px",
+                    "container-max": "1440px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Geist"],
+                    "headline-xl": ["Space Grotesk"],
+                    "headline-lg-mobile": ["Space Grotesk"],
+                    "body-md": ["Geist"],
+                    "label-sm": ["Geist"],
+                    "label-mono": ["JetBrains Mono"],
+                    "headline-md": ["Space Grotesk"],
+                    "headline-lg": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "600"}],
+                    "label-mono": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0a0a0a;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .cyber-grid {
+            background-image: 
+                linear-gradient(rgba(255, 179, 178, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 179, 178, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .neon-glow-primary:hover {
+            box-shadow: 0px 0px 15px rgba(255, 82, 92, 0.4);
+        }
+
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ffb3b2, transparent);
+            position: absolute;
+            top: 0;
+            animation: scan 4s linear infinite;
+            opacity: 0.2;
+        }
+
+        @keyframes scan {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+
+        .corner-bracket {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-color: #ffb3b2;
+            opacity: 0.5;
+        }
+
+        .bracket-tl { top: 8px; left: 8px; border-top: 2px solid; border-left: 2px solid; }
+        .bracket-tr { top: 8px; right: 8px; border-top: 2px solid; border-right: 2px solid; }
+        .bracket-bl { bottom: 8px; left: 8px; border-bottom: 2px solid; border-left: 2px solid; }
+        .bracket-br { bottom: 8px; right: 8px; border-bottom: 2px solid; border-right: 2px solid; }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style><br>            @keyframes shimmer {<br>                0% { transform: translateX(-100%); }<br>                100% { transform: translateX(100%); }<br>            }<br>        </style><style><br>            @keyframes shimmer {<br>                0% { transform: translateX(-100%); }<br>                100% { transform: translateX(100%); }<br>            }<br>        </style><style><br>            @keyframes shimmer {<br>                0% { transform: translateX(-100%); }<br>                100% { transform: translateX(100%); }<br>            }<br>        </style><style><br>            @keyframes shimmer {<br>                0% { transform: translateX(-100%); }<br>                100% { transform: translateX(100%); }<br>            }<br>        </style></head>
+<body class="font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-white/10">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold tracking-tighter text-primary" href="{{DATA:SCREEN:SCREEN_39}}">RONIN TECH</a>
+<nav class="hidden md:flex items-center gap-8"><div class="relative group">
+  <button class="flex items-center gap-1 text-on-surface/70 font-medium hover:text-primary transition-colors font-label-mono text-label-mono">
+    Services
+    <span class="material-symbols-outlined text-[18px]">expand_more</span>
+  </button>
+  <div class="absolute top-full left-0 mt-2 w-64 glass-panel backdrop-blur-xl border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+    <div class="flex flex-col p-2"><a href="{{DATA:SCREEN:SCREEN_27}}" class="px-4 py-3 text-label-mono text-on-surface/70 hover:text-primary hover:bg-primary/5 transition-colors">24/7 Monitoring</a><a href="{{DATA:SCREEN:SCREEN_11}}" class="px-4 py-3 text-label-mono text-on-surface/70 hover:text-primary hover:bg-primary/5 transition-colors">Secure Digital Marketing</a><a href="{{DATA:SCREEN:SCREEN_35}}" class="px-4 py-3 text-label-mono text-on-surface/70 hover:text-primary hover:bg-primary/5 transition-colors">Advanced Safety Products</a><a href="{{DATA:SCREEN:SCREEN_5}}" class="px-4 py-3 text-label-mono text-on-surface/70 hover:text-primary hover:bg-primary/5 transition-colors">Security Consultation</a><a href="{{DATA:SCREEN:SCREEN_37}}" class="px-4 py-3 text-label-mono text-on-surface/70 hover:text-primary hover:bg-primary/5 transition-colors">Assistance &amp; Training</a></div>
+  </div>
+</div>
+
+
+
+<a class="text-on-surface/70 font-medium hover:text-primary transition-colors font-label-mono text-label-mono" href="{{DATA:SCREEN:SCREEN_7}}">About Us</a>
+</nav>
+<div class="flex items-center gap-4">
+
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-label-mono text-label-mono hover:brightness-110 active:scale-95 transition-all" onclick="window.location.href='{{DATA:SCREEN:SCREEN_2}}'">
+                    Deploy Defense
+                </button>
+</div>
+</div>
+</header>
+<main class="relative pt-32 pb-24">
+<!-- Atmospheric Background -->
+<div class="absolute inset-0 -z-10 cyber-grid opacity-30"></div>
+
+<!-- Hero Section -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-32 relative">
+<div class="max-w-4xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/20 mb-6">
+<span class="w-2 h-2 bg-primary animate-pulse"></span>
+<span class="font-label-mono text-label-sm text-primary uppercase tracking-widest">Protocol 0-0-1 Active</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-6 leading-[0.95]">
+                    Secure Digital Marketing <span class="text-primary">Ecosystem</span>
+</h1>
+<p class="font-headline-md text-headline-md text-on-surface-variant mb-8 max-w-2xl font-light">
+                    Elite Demand Generation. <span class="text-white border-b border-primary/50">Bulletproof Ad Spend.</span>
+</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<p class="font-body-lg text-body-lg text-on-surface/80 leading-relaxed">
+                        Most marketing agencies only focus on generating clicks. They don’t care if those clicks come from a real buyer or a malicious software bot. At Ronin Tech, we do things differently. We engineer and execute campaigns natively wrapped in enterprise-grade cybersecurity.
+                    </p>
+<div class="glass-panel p-6 relative" style="--mouse-x: 335.01123046875px; --mouse-y: 8.16046142578125px;">
+<div class="bracket-tl corner-bracket"></div>
+<div class="bracket-br corner-bracket"></div>
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-4xl">shield_locked</span>
+<div class="font-label-mono text-label-sm">CORE ENCRYPTION STATUS: <span class="text-primary">OPERATIONAL</span></div>
+</div>
+<div class="h-1 bg-surface-container-highest w-full overflow-hidden">
+<div class="h-full bg-primary w-2/3 animate-[shimmer_2s_infinite]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 1: Campaign Types (Bento Grid) -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-32">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<span class="font-label-mono text-label-sm text-primary uppercase tracking-widest mb-2 block">Service Modules</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">The Types of Campaigns We Run</h2>
+</div>
+<div class="text-right font-label-mono text-label-sm opacity-50">
+                    MODULE_DEPLOYMENT_VERSION: v4.22
+                </div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- PPC Card -->
+<div class="lg:col-span-7 glass-panel p-10 relative group overflow-hidden" style="--mouse-x: 662.7537841796875px; --mouse-y: 73.83587646484375px;">
+<div class="scanline"></div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-primary text-5xl">ads_click</span>
+<div class="px-3 py-1 border border-secondary/20 text-secondary font-label-mono text-label-sm">MODULE: PPC_V1</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">High-Intent PPC &amp; Search</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h4 class="font-label-mono text-label-sm text-primary mb-2 uppercase">Platforms</h4>
+<ul class="space-y-1 text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span> Google Ads</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span> Microsoft Bing Ads</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-mono text-label-sm text-primary mb-2 uppercase">Strategy</h4>
+<p class="text-on-surface-variant">Target ultra-specific keywords used by corporate decision-makers.</p>
+</div>
+</div>
+<div class="mt-12 pt-6 border-t border-white/5">
+<div class="flex items-center gap-3 text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="font-label-mono text-label-sm uppercase tracking-tight">Security: Real-time IP and VPN filtering to block bots/competitors.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Social/ABM Card -->
+<div class="lg:col-span-5 glass-panel p-10 relative group overflow-hidden" style="--mouse-x: 408.00933837890625px; --mouse-y: 425.83587646484375px;">
+<div class="relative z-10 flex flex-col h-full">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-primary text-5xl">group_work</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Premium Paid Social &amp; ABM</h3>
+<div class="space-y-6 flex-grow">
+<div>
+<h4 class="font-label-mono text-label-sm text-primary mb-2 uppercase">Platforms</h4>
+<p class="text-on-surface-variant">LinkedIn Ads, Meta Ads.</p>
+</div>
+<div>
+<h4 class="font-label-mono text-label-sm text-primary mb-2 uppercase">Strategy</h4>
+<p class="text-on-surface-variant">Tailored, multi-touch ad funnels for enterprise accounts.</p>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-white/5">
+<div class="flex items-start gap-3 text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-mono text-label-sm uppercase tracking-tight leading-tight">Security: Automated form-guard protection against CRM spam.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Retargeting Card -->
+<div class="lg:col-span-12 glass-panel p-10 relative overflow-hidden flex flex-col md:flex-row gap-12 items-center" style="--mouse-x: 147.24627685546875px; --mouse-y: 22.296630859375px;">
+<div class="md:w-1/3">
+<span class="material-symbols-outlined text-primary text-6xl mb-6">dynamic_feed</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Intent-Driven Retargeting</h3>
+</div>
+<div class="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8 border-l border-white/5 pl-0 md:pl-12">
+<div>
+<h4 class="font-label-mono text-label-sm text-primary mb-2 uppercase">Strategy</h4>
+<p class="text-on-surface-variant text-body-md">Re-engage warm traffic with whitepapers/case studies. High-value nurturing.</p>
+</div>
+<div>
+<h4 class="font-label-mono text-label-sm text-primary mb-2 uppercase">Security</h4>
+<p class="text-on-surface-variant text-body-md">Impression laundering prevention. We only serve ads on reputable sites.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: 3-Step Security Framework -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-32">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">3-Step Campaign Security Framework</h2>
+<div class="h-1 w-24 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Phase 1 -->
+<div class="relative pt-12">
+<div class="absolute top-0 left-0 font-headline-xl text-[120px] leading-none opacity-5 font-bold select-none">01</div>
+<div class="relative glass-panel p-8 group hover:border-primary/40 transition-colors h-full" style="--mouse-x: 44.24627685546875px; --mouse-y: 28.548583984375px;">
+<div class="bracket-tl corner-bracket"></div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Clean Traffic Ingestion</h3>
+<p class="text-on-surface-variant font-body-md">Map browser environment and device characteristics to filter out headless browsers and synthetic identities before your budget is spent.</p>
+<div class="mt-8 flex justify-end">
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Phase 2 -->
+<div class="relative pt-12">
+<div class="absolute top-0 left-0 font-headline-xl text-[120px] leading-none opacity-5 font-bold select-none">02</div>
+<div class="relative glass-panel p-8 group hover:border-primary/40 transition-colors h-full border-primary/20" style="--mouse-x: 336.41796875px; --mouse-y: 56.548583984375px;">
+<div class="bracket-tl corner-bracket !opacity-100"></div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Brand &amp; Spoof Defense</h3>
+<p class="text-on-surface-variant font-body-md">Active scanning for fake ads using your brand name. We takedown malicious impersonators protecting your customer's journey.</p>
+<div class="mt-8 flex justify-end">
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Phase 3 -->
+<div class="relative pt-12">
+<div class="absolute top-0 left-0 font-headline-xl text-[120px] leading-none opacity-5 font-bold select-none">03</div>
+<div class="relative glass-panel p-8 group hover:border-primary/40 transition-colors h-full" style="--mouse-x: 392.0821533203125px; --mouse-y: 224.548583984375px;">
+<div class="bracket-tl corner-bracket"></div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Privacy-First Analytics</h3>
+<p class="text-on-surface-variant font-body-md">Secure tracking architectures fully compliant with GDPR and CCPA. Zero-leak attribution models for high-stakes enterprise data.</p>
+<div class="mt-8 flex justify-end">
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-16">
+<div class="bg-primary/5 border border-primary/10 p-12 md:p-20 text-center relative overflow-hidden">
+
+<div class="relative z-10">
+<h2 class="font-headline-lg text-headline-lg text-white mb-6">Stop Wasting Budget on Bots.<br>Scale with Real Humans.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                        Join the elite organizations securing their demand generation engine with Ronin Tech. Immediate deployment available.
+                    </p>
+
+<div class="mt-8 flex justify-center gap-8 opacity-40 grayscale font-label-mono text-label-sm">
+<span class="">TRUST_SCORE: 99.8%</span>
+<span class="">LATENCY: 12ms</span>
+<span class="">ACTIVE_SESSIONS: 4,129</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic Visual Detail -->
+<div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 gap-gutter opacity-20 pointer-events-none">
+<div class="h-24 glass-panel flex items-center justify-center">
+<div class="w-full h-full opacity-40" data-alt="A macro cinematic close up of a circuit board illuminated by pulsating red fiber optic lights, representing high-speed secure data transmission in a futuristic cybersecurity theme." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAAQndFHbsPkSiS31MXwu6H0Gzi3IW3k72Tec9CMv3Dh5XJulLbNgg_WHUtxrg16cozU4csGLHW7MAbk79L22HRKt-QEbF2ePQCMb4sPPZveZ-rk8u0HNQfEncsI9He-gTk-tRtk7N0NPXvYG_tNhU0HjeLjkrS9P-_l5-A7uksF47Eyk63xWQ1hdZ-TebSsp-Rrt3o2QgRNyftABw09fBvqPE6_R46C_Yz-xJZofUXj2uDx_WQxYaZMHED0P4WZxsUj0e3aJJ7cAQ')"></div>
+</div>
+<div class="h-24 glass-panel flex items-center justify-center">
+<div class="w-full h-full opacity-40" data-alt="A dark abstract visualization of a global digital network with bright connection points and red scan lines moving across a topographic map of the world, elite security aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQkXtjr5d81w9CdzkHYps5agtvYveaI0oqw7Fac7JtCiL4-EZuicxskPVtmOg_-iCqq2TNxTmNzTtD7xeISh_2w7wRSkwPr2GzTsTXHQO-Q57L4UEbz1-iMNAbCSZhuu9euoYdmiorpw7eCWylicImRFbmU0emPHkiqNUNeXeKGtYmntC79G9TPa3JChh_vft4rt2ftlq8PMPQHltQv1jqblubTc6wo-OWkRqpQQaOVPsjUbJXcrUhNdee1_9A5_-jEVqdI-KQC_0')"></div>
+</div>
+<div class="h-24 glass-panel flex items-center justify-center">
+<div class="w-full h-full opacity-40" data-alt="A minimalist tech interface with glowing data counters and high-contrast red typography against a pitch black background, cinematic data visualization style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAlK4l1Ekf0c7Fb1zDP-l3wwDADTVqkIq4DZUroS4UY96P2O53Sq38NzEItz8gtSUYQPwpSeQ2SXW5vFQLxfeZDlVlNGpxuX6J1R64X_XKD2nj0tkA3k5SFXv9sLp4b-wDYvhJMIdlK3m074MVP592KZf1FjNJ0tf1WyZ5kOmmCTHjJs4myZLkmuC2PFFgTp2OMm3SFrZn7w8wpVKjUvphWsNnbYKXxmbb7rqXtBAnN3SpHhkDrCpRqqiYR46Gam3AaVjXr4xwmu0I')"></div>
+</div>
+<div class="h-24 glass-panel flex items-center justify-center">
+<div class="w-full h-full opacity-40" data-alt="A futuristic samurai mask icon rendered in low-poly 3D with glowing neon red edges, floating in a dark digital void with floating dust particles." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsdnwBArsPlHJ4SOoY2_EAee0f0EFm8Kk6dNaijdAN2INaAwcgpDQ4C6PPEebx4Jyq6v2CRfGK4Q0nIGgkCB1_onFTRCSA3DjZHzd-MBY5_uSEalNlEOhvyAarZCGM8V1-CUSOMnJYzDVCsp1iIvDeCjtpSCnyIU7WQiVk_FRJ_gsRlU96CWUkaftawwfqri9TYz4oat8jEBg9aIkQ5fk_OnwBp_oJCHYCq4jXKC6wq84uJunvgeRfqn9KJQIdBiTgYktzJEeq-eY')"></div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-lowest border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-headline-md text-headline-md text-primary font-bold">RONIN TECH</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 RONIN TECH. ALL RIGHTS RESERVED. PROTOCOL 0-0-1.</p>
+</div>
+<nav class="flex gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Terms of Engagement</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#">SLA</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Contact</a>
+</nav>
+</div>
+</footer>
+<script>
+        // Micro-interaction: Mouse tracking glow for cards
+        document.querySelectorAll('.glass-panel').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // Add CSS for the shimmer animation used in progress bar
+        const styleSheet = document.createElement("style");
+        styleSheet.innerText = `
+            @keyframes shimmer {
+                0% { transform: translateX(-100%); }
+                100% { transform: translateX(100%); }
+            }
+        `;
+        document.head.appendChild(styleSheet);
+    </script>
+
+
+
+
+
+
+
+
+</body></html>
