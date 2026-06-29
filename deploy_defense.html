@@ -3,7 +3,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Ronin Tech | Schedule an Architecture Review</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Geist:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Geist:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
       tailwind.config = {
@@ -151,11 +151,12 @@
       ::-webkit-scrollbar-thumb:hover { background: #bf002a; }
     </style>
 </head>
-<body class="font-body-md selection:bg-ronin-red selection:text-white">
+<body class="font-body-md selection:bg-ronin-red selection:text-white min-h-screen flex flex-col justify-between">
+
 <nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-white/5 h-20">
 <div class="flex justify-between items-center px-margin-desktop h-full w-full max-w-container-max mx-auto">
 <div class="flex items-center gap-4">
-<a href="home.html" class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter hover:text-primary transition-colors">RONIN TECH</a>
+<a href="home" class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter hover:text-primary transition-colors">RONIN TECH</a>
 <span class="font-label-mono text-[10px] text-primary px-2 py-0.5 border border-primary/30 uppercase tracking-[0.2em] hidden sm:block">Defense System V4.0</span>
 </div>
 <div class="hidden md:flex items-center gap-gutter">
@@ -164,16 +165,41 @@
     Services <span class="material-symbols-outlined text-sm">expand_more</span>
   </button>
   <div class="absolute top-full left-0 mt-2 w-64 bg-surface-container-highest border border-white/5 backdrop-blur-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-    <div class="flex flex-col"><a href="24x7 Monitoring.html" class="px-4 py-3 text-label-sm uppercase tracking-widest text-on-surface/70 hover:bg-ronin-red hover:text-white transition-colors border-b border-white/5">24/7 Monitoring</a><a href="DigitalMarketting.html" class="px-4 py-3 text-label-sm uppercase tracking-widest text-on-surface/70 hover:bg-ronin-red hover:text-white transition-colors border-b border-white/5">Secure Digital Marketing</a><a href="advanced_safety.html" class="px-4 py-3 text-label-sm uppercase tracking-widest text-on-surface/70 hover:bg-ronin-red hover:text-white transition-colors border-b border-white/5">Advanced Safety Products</a><a href="consultation.html" class="px-4 py-3 text-label-sm uppercase tracking-widest text-on-surface/70 hover:bg-ronin-red hover:text-white transition-colors border-b border-white/5">Security Consultation</a><a href="training.html" class="px-4 py-3 text-label-sm uppercase tracking-widest text-on-surface/70 hover:bg-ronin-red hover:text-white transition-colors">Assistance & Training</a></div>
+    <div class="flex flex-col py-2">
+        <a href="24x7 Monitoring" class="px-4 py-3 text-label-sm uppercase tracking-widest text-on-surface/70 hover:bg-ronin-red hover:text-white transition-colors border-b border-white/5">24/7 Monitoring</a>
+        <a href="DigitalMarketting" class="px-4 py-3 text-label-sm uppercase tracking-widest text-on-surface/70 hover:bg-ronin-red hover:text-white transition-colors border-b border-white/5">Secure Digital Marketing</a>
+        <a href="advanced_safety" class="px-4 py-3 text-label-sm uppercase tracking-widest text-on-surface/70 hover:bg-ronin-red hover:text-white transition-colors border-b border-white/5">Advanced Safety Products</a>
+        <a href="consultation" class="px-4 py-3 text-label-sm uppercase tracking-widest text-on-surface/70 hover:bg-ronin-red hover:text-white transition-colors border-b border-white/5">Security Consultation</a>
+        <a href="training" class="px-4 py-3 text-label-sm uppercase tracking-widest text-on-surface/70 hover:bg-ronin-red hover:text-white transition-colors">Assistance & Training</a>
+    </div>
   </div>
 </div>
-<a class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface/70 hover:text-primary transition-colors duration-300" href="about_us.html">About Us</a>
-<button class="bg-primary-container text-on-primary-container px-6 py-2 font-label-mono text-label-mono uppercase tracking-widest active:scale-95 transition-transform duration-150" onclick="window.location.href='deploy_defense.html'">Deploy Defense</button>
+<a class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface/70 hover:text-primary transition-colors duration-300" href="about_us">About Us</a>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-label-mono text-label-mono uppercase tracking-widest active:scale-95 transition-transform duration-150" onclick="window.location.href='deploy_defense'">Deploy Defense</button>
 </div>
+
+<button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none p-2 flex items-center justify-center">
+    <span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+
+<div id="mobile-dropdown-panel" class="absolute top-20 left-0 w-full bg-surface/95 border-b border-white/10 flex flex-col px-6 py-6 space-y-4 md:hidden opacity-0 pointer-events-none transition-all duration-300 transform -translate-y-2 z-40 backdrop-blur-xl">
+    <span class="font-label-mono text-[10px] text-primary/40 tracking-widest uppercase">// MOBILE_ACCESS_NODE</span>
+    <div class="flex flex-col border-l border-white/10 pl-4 space-y-3">
+        <span class="font-label-mono text-xs text-primary/60 tracking-wider uppercase">Services</span>
+        <a href="24x7 Monitoring" class="text-body-md text-on-surface-variant hover:text-primary">24/7 Monitoring</a>
+        <a href="DigitalMarketting" class="text-body-md text-on-surface-variant hover:text-primary">Secure Digital Marketing</a>
+        <a href="advanced_safety" class="text-body-md text-on-surface-variant hover:text-primary">Advanced Safety Products</a>
+        <a href="consultation" class="text-body-md text-on-surface-variant hover:text-primary">Security Consultation</a>
+        <a href="training" class="text-body-md text-on-surface-variant hover:text-primary">Assistance & Training</a>
+    </div>
+    <hr class="border-white/5">
+    <a class="text-body-md text-on-surface font-medium pt-1" href="about_us">About Us</a>
+    <button class="bg-primary-container text-on-primary-container text-center py-3 font-bold uppercase tracking-wider text-sm" onclick="window.location.href='deploy_defense'">Deploy Defense</button>
 </div>
 </nav>
 
-<main class="relative z-10 pt-32 pb-margin-desktop px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<main class="relative z-10 pt-32 pb-margin-desktop px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex-grow">
 <header class="mb-16 md:mb-24 max-w-4xl">
 <div class="flex items-center gap-2 mb-4">
 <span class="status-dot"></span>
@@ -193,37 +219,33 @@
 <section class="lg:col-span-8 glass-panel p-gutter relative overflow-hidden">
 <div class="absolute top-0 left-0 w-8 h-8 bracket-tl"></div>
 <div class="absolute bottom-0 right-0 w-8 h-8 bracket-br"></div>
-
-<form action="https://api.web3forms.com/submit" method="POST" class="space-y-gutter relative z-10" id="assessment-form">
-    <input type="hidden" name="access_key" value="f3442e2e-81f9-47a8-adad-8531cc769731">
-    <input type="hidden" name="subject" value="New Security Architecture Review Request">
-
+<form class="space-y-gutter relative z-10" id="assessment-form">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <div class="space-y-2">
 <label class="font-label-mono text-label-mono text-primary uppercase tracking-widest block">01 // Full Name</label>
-<input class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant py-4 px-4 text-on-surface focus:ring-0 focus:border-neon-blue transition-all input-glow placeholder:text-on-surface/20" name="client_name" placeholder="Piyush Sharma" required type="text">
+<input class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant py-4 px-4 text-on-surface focus:ring-0 focus:border-neon-blue transition-all input-glow placeholder:text-on-surface/20" placeholder="John Doe" type="text">
 </div>
 <div class="space-y-2">
 <label class="font-label-mono text-label-mono text-primary uppercase tracking-widest block">02 // Corporate Email</label>
-<input class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant py-4 px-4 text-on-surface focus:ring-0 focus:border-neon-blue transition-all input-glow placeholder:text-on-surface/20" name="client_email" placeholder="piyush@company.com" required type="email">
+<input class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant py-4 px-4 text-on-surface focus:ring-0 focus:border-neon-blue transition-all input-glow placeholder:text-on-surface/20" placeholder="corporate@company.com" type="email">
 <p class="font-label-sm text-label-sm text-on-surface/40 mt-1">Please use your business email for priority routing.</p>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <div class="space-y-2">
 <label class="font-label-mono text-label-mono text-primary uppercase tracking-widest block">03 // Phone Number</label>
-<input class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant py-4 px-4 text-on-surface focus:ring-0 focus:border-neon-blue transition-all input-glow placeholder:text-on-surface/20" name="client_phone" placeholder="+91 98765-43210" required type="tel">
+<input class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant py-4 px-4 text-on-surface focus:ring-0 focus:border-neon-blue transition-all input-glow placeholder:text-on-surface/20" placeholder="+91 98765-43210" type="tel">
 </div>
 <div class="space-y-2">
 <label class="font-label-mono text-label-mono text-primary uppercase tracking-widest block">04 // Company & Website URL</label>
-<input class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant py-4 px-4 text-on-surface focus:ring-0 focus:border-neon-blue transition-all input-glow placeholder:text-on-surface/20" name="company_profile" placeholder="Company Name / www.company.com" required type="text">
+<input class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant py-4 px-4 text-on-surface focus:ring-0 focus:border-neon-blue transition-all input-glow placeholder:text-on-surface/20" placeholder="Company Name / www.company.com" type="text">
 </div>
 </div>
 <div class="space-y-2">
 <label class="font-label-mono text-label-mono text-primary uppercase tracking-widest block">05 // Country / Region</label>
 <div class="relative group">
-<select class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant py-4 px-4 text-on-surface focus:ring-0 focus:border-neon-blue transition-all appearance-none" name="territory" required>
-<option disabled selected value="">Select Territory</option>
+<select class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant py-4 px-4 text-on-surface focus:ring-0 focus:border-neon-blue transition-all appearance-none">
+<option disabled="" selected="" value="">Select Territory</option>
 <option value="india">India</option>
 <option value="usa">United States</option>
 <option value="uk">United Kingdom</option>
@@ -236,8 +258,8 @@
 <div class="space-y-4">
 <label class="font-label-mono text-label-mono text-primary uppercase tracking-widest block">06 // Primary focus area</label>
 <div class="relative group">
-<select class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant py-4 px-4 text-on-surface focus:ring-0 focus:border-neon-blue transition-all appearance-none" name="focus_area" required>
-<option disabled selected value="">Select Focus Area</option>
+<select class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant py-4 px-4 text-on-surface focus:ring-0 focus:border-neon-blue transition-all appearance-none">
+<option disabled="" selected="" value="">Select Focus Area</option>
 <option value="hardening">Hardening Corporate Infrastructure (Sentinel Defense Lineage™)</option>
 <option value="marketing">Launching Secure Digital Marketing Campaigns</option>
 <option value="monitoring">24/7 Security Monitoring & Incident Response</option>
@@ -249,103 +271,4 @@
 </div>
 </div>
 <div class="space-y-2">
-<label class="font-label-mono text-label-mono text-primary uppercase tracking-widest block">07 // Estimated Monthly Project Scope</label>
-<div class="relative">
-<select class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant py-4 px-4 text-on-surface focus:ring-0 focus:border-neon-blue transition-all appearance-none" name="project_scope">
-<option value="low">Up to $2,500</option>
-<option value="mid-low">$2,500 – $5,000</option>
-<option value="mid-high">$5,000 – $15,000</option>
-<option value="high">$15,000 – $50,000</option>
-<option value="enterprise">$50,000+</option>
-</select>
-<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface/40 pointer-events-none">expand_more</span>
-</div>
-</div>
-<div class="space-y-2">
-<label class="font-label-mono text-label-mono text-primary uppercase tracking-widest block">08 // Brief Overview</label>
-<textarea class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant py-4 px-4 text-on-surface focus:ring-0 focus:border-neon-blue transition-all input-glow placeholder:text-on-surface/20 resize-none" name="infrastructure_overview" placeholder="Tell us briefly about your current setup..." rows="4"></textarea>
-</div>
-<div class="pt-8">
-<button class="cyber-button w-full md:w-auto bg-ronin-red text-white px-12 py-5 font-headline-md text-headline-md uppercase tracking-widest flex items-center justify-center gap-4 hover:brightness-110 shadow-[0_0_20px_rgba(191,0,42,0.3)]" type="submit">
-<div class="scan-line"></div>
-                            Initialize Secure Consultation <span class="material-symbols-outlined">arrow_right_alt</span>
-</button>
-</div>
-</form>
-</section>
-<aside class="lg:col-span-4 space-y-gutter">
-<div class="glass-panel p-gutter border-l-4 border-l-ronin-red relative overflow-hidden">
-<h3 class="font-label-mono text-label-mono text-primary uppercase tracking-widest mb-8 flex items-center gap-2">
-<span class="material-symbols-outlined text-sm">terminal</span>
-                        What Happens Next?
-                    </h3>
-<div class="space-y-10">
-<div class="flex gap-4 group">
-<div class="font-label-mono text-headline-md text-primary/30 group-hover:text-primary transition-colors">01</div>
-<div>
-<h4 class="font-headline-md text-on-surface mb-1">Immediate Footprint Analysis</h4>
-<p class="text-label-sm text-on-surface/50 uppercase tracking-wider">Passive Scan Protocol</p>
-</div>
-</div>
-<div class="flex gap-4 group">
-<div class="font-label-mono text-headline-md text-primary/30 group-hover:text-primary transition-colors">02</div>
-<div>
-<h4 class="font-headline-md text-on-surface mb-1">Global Strategic Session</h4>
-<p class="text-label-sm text-on-surface/50 uppercase tracking-wider">Secure Video Conference</p>
-</div>
-</div>
-<div class="flex gap-4 group">
-<div class="font-label-mono text-headline-md text-primary/30 group-hover:text-primary transition-colors">03</div>
-<div>
-<h4 class="font-headline-md text-on-surface mb-1">Deployment & Alignment</h4>
-<p class="text-label-sm text-on-surface/50 uppercase tracking-wider">Seamless Integration</p>
-</div>
-</div>
-</div>
-</div>
-</aside>
-</div>
-</main>
-<footer class="mt-24 bg-surface-container-lowest border-t border-white/5 w-full">
-<div class="flex flex-col md:flex-row justify-between items-start md:items-center px-margin-desktop py-12 gap-8 w-full max-w-container-max mx-auto">
-<div class="max-w-xl">
-<div class="font-label-mono text-on-surface-variant mb-4 flex items-center gap-2">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">security</span>
-                    Privacy & Sovereignty Guaranteed
-                </div>
-<p class="font-label-sm text-on-surface/40 leading-relaxed italic">
-                    Your information is fully encrypted in transit and at rest. We never share, sell, or compromise your corporate data. Built on absolute trust.
-                </p>
-</div>
-<div class="flex flex-col gap-4 text-right">
-<div class="flex gap-gutter font-label-mono text-label-mono">
-<a class="text-on-surface-variant hover:text-primary transition-all underline underline-offset-4" href="#">System Protocols</a>
-<a class="text-on-surface-variant hover:text-primary transition-all underline underline-offset-4" href="#">Privacy Policy</a>
-<a class="text-on-surface-variant hover:text-primary transition-all underline underline-offset-4" href="#">Terms of Engagement</a>
-</div>
-<div class="font-label-mono text-label-sm text-on-surface/30 tracking-widest">
-                    © 2024 RONIN TECH. ALL RIGHTS RESERVED. <span class="text-secondary ml-2">SYSTEM STATUS: OPERATIONAL</span>
-</div>
-</div>
-</div>
-</footer>
-<script>
-        document.querySelectorAll('input, select, textarea').forEach(el => {
-            el.addEventListener('focus', () => {
-                const label = el.previousElementSibling;
-                if (label && label.tagName === 'LABEL') {
-                    label.style.transform = 'translateX(4px)';
-                    label.style.color = '#00dbe7';
-                    label.style.transition = 'all 0.3s ease';
-                }
-            });
-            el.addEventListener('blur', () => {
-                const label = el.previousElementSibling;
-                if (label && label.tagName === 'LABEL') {
-                    label.style.transform = 'translateX(0)';
-                    label.style.color = '';
-                }
-            });
-        });
-    </script>
-</body></html>
+<label class="font-label-mono
