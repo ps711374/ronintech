@@ -5,7 +5,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Geist:wght@300;400;600&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <style>
         body {
             background-color: #0a0a0a;
@@ -160,23 +159,32 @@
     </script>
 </head>
 <body class="font-body-md selection:bg-primary-container selection:text-white">
-<!-- Header / Navigation Shell -->
+
 <header class="fixed top-0 w-full bg-surface/80 backdrop-blur-xl border-b border-white/10 flex justify-between items-center h-20 px-margin-desktop z-50">
-<div class="font-headline-md text-headline-md font-bold tracking-tighter text-primary"><a href="{{DATA:SCREEN:SCREEN_36}}" class="">RONIN TECH</a></div><nav class="hidden md:flex gap-10 items-center"><div class="relative group">
+<div class="font-headline-md text-headline-md font-bold tracking-tighter text-primary"><a href="home.html" class="">RONIN TECH</a></div>
+<nav class="hidden md:flex gap-10 items-center">
+<div class="relative group">
   <button class="font-body-md text-body-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 flex items-center gap-1">
     Services <span class="material-symbols-outlined text-[18px]">expand_more</span>
   </button>
   <div class="absolute top-full right-0 mt-2 w-64 bg-surface-container border border-white/10 backdrop-blur-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-    <div class="flex flex-col"><a href="{{DATA:SCREEN:SCREEN_24}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border-b border-white/5">24/7 MONITORING</a><a href="{{DATA:SCREEN:SCREEN_11}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border-b border-white/5">SECURE DIGITAL MARKETING</a><a href="{{DATA:SCREEN:SCREEN_32}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border-b border-white/5">ADVANCED SAFETY PRODUCTS</a><a href="{{DATA:SCREEN:SCREEN_5}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border-b border-white/5">SECURITY CONSULTATION</a><a href="{{DATA:SCREEN:SCREEN_34}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors">ASSISTANCE &amp; TRAINING</a></div>
+    <div class="flex flex-col">
+      <a href="24x7 Monitoring.html" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border-b border-white/5">24/7 MONITORING</a>
+      <a href="DigitalMarketting.html" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border-b border-white/5">SECURE DIGITAL MARKETING</a>
+      <a href="advanced_safety.html" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border-b border-white/5">ADVANCED SAFETY PRODUCTS</a>
+      <a href="consultation.html" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border-b border-white/5">SECURITY CONSULTATION</a>
+      <a href="training.html" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors">ASSISTANCE &amp; TRAINING</a>
+    </div>
   </div>
 </div>
-<a class="font-body-md text-body-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_7}}">About Us</a>
-<a href="{{DATA:SCREEN:SCREEN_2}}" class="bg-primary-container text-on-primary-container px-6 py-2 font-bold hover:scale-95 duration-200 transition-transform inline-block">Deploy Defense</a></nav><button class="md:hidden text-primary"><span class="material-symbols-outlined">menu</span></button>
+<a class="font-body-md text-body-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="about_us.html">About Us</a>
+<a href="deploy_defense.html" class="bg-primary-container text-on-primary-container px-6 py-2 font-bold hover:scale-95 duration-200 transition-transform inline-block">Deploy Defense</a>
+</nav>
+<button class="md:hidden text-primary"><span class="material-symbols-outlined">menu</span></button>
 </header>
-<main class="pt-24 min-h-screen">
-<!-- Hero Section -->
-<section class="relative h-[70vh] flex items-center justify-center overflow-hidden border-b border-white/5">
 
+<main class="pt-24 min-h-screen">
+<section class="relative h-[70vh] flex items-center justify-center overflow-hidden border-b border-white/5">
 <div class="relative z-10 text-center max-w-4xl px-margin-mobile">
 <div class="inline-flex items-center gap-2 mb-6 px-3 py-1 border border-secondary-fixed/30 bg-secondary-fixed/10">
 <span class="material-symbols-outlined text-secondary-fixed text-[14px]" style="font-variation-settings: 'FILL' 1;">radar</span>
@@ -197,11 +205,10 @@
 </div>
 </div>
 </div>
-<!-- HUD Elements -->
 <div class="absolute top-10 left-10 w-20 h-20 border-t-2 border-l-2 border-primary-container opacity-30"></div>
 <div class="absolute bottom-10 right-10 w-20 h-20 border-b-2 border-r-2 border-primary-container opacity-30"></div>
 </section>
-<!-- Core Capabilities Bento Grid -->
+
 <section class="py-24 px-margin-desktop max-w-container-max mx-auto">
 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
 <div>
@@ -213,12 +220,18 @@
                 </p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<!-- Capability 1 -->
-<div class="md:col-span-8 glass-panel p-8 relative overflow-hidden group">
+<div class="md:col-span-8 glass-panel p-10 relative group overflow-hidden">
 <div class="scanning-line"></div>
-<div class="relative z-10 flex flex-col md:flex-row gap-8 items-center"><a href="{{DATA:SCREEN:SCREEN_24}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border-b border-white/5">24/7 MONITORING</a><a href="{{DATA:SCREEN:SCREEN_11}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border-b border-white/5">SECURE DIGITAL MARKETING</a><a href="{{DATA:SCREEN:SCREEN_32}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border-b border-white/5">ADVANCED SAFETY PRODUCTS</a><a href="{{DATA:SCREEN:SCREEN_5}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border-b border-white/5">SECURITY CONSULTATION</a><a href="{{DATA:SCREEN:SCREEN_34}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors">ASSISTANCE &amp; TRAINING</a></div>
+<div class="flex flex-col gap-4">
+<h3 class="font-headline-md text-headline-md text-white mb-2">24/7 Threat Hunting Matrix</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Continuous machine intelligence coupled with high-tier security analysts monitoring system logs to capture threat footprints instantly.</p>
+<div class="flex flex-col md:flex-row gap-4">
+  <a href="24x7 Monitoring.html" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border border-white/10 text-center">24/7 MONITORING</a>
+  <a href="DigitalMarketting.html" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border border-white/10 text-center">SECURE DIGITAL MARKETING</a>
+  <a href="advanced_safety.html" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border border-white/10 text-center">ADVANCED SAFETY PRODUCTS</a>
 </div>
-<!-- Capability 2 -->
+</div>
+</div>
 <div class="md:col-span-4 glass-panel p-8 relative group">
 <div class="hud-corner top-0 left-0 border-t-2 border-l-2"></div>
 <span class="material-symbols-outlined text-[48px] text-primary-container mb-6 block cyber-glow-red">security_update_good</span>
@@ -234,7 +247,6 @@
 </div>
 </div>
 </div>
-<!-- Capability 3 -->
 <div class="md:col-span-4 glass-panel p-8 group">
 <span class="material-symbols-outlined text-[48px] text-secondary-fixed mb-6 block cyber-glow-blue">notifications_active</span>
 <h3 class="font-headline-md text-headline-md mb-4">Automated Alert Systems</h3>
@@ -244,13 +256,17 @@
 <span class="px-2 py-1 bg-white/5 border border-white/10 text-label-sm font-label-mono text-on-surface-variant">ML SORTING</span>
 </div>
 </div>
-<!-- Capability 4 -->
-<div class="md:col-span-8 glass-panel p-8 relative overflow-hidden group">
-<div class="flex flex-col md:flex-row gap-8 items-center"><a href="{{DATA:SCREEN:SCREEN_24}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border-b border-white/5">24/7 MONITORING</a><a href="{{DATA:SCREEN:SCREEN_11}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border-b border-white/5">SECURE DIGITAL MARKETING</a><a href="{{DATA:SCREEN:SCREEN_32}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border-b border-white/5">ADVANCED SAFETY PRODUCTS</a><a href="{{DATA:SCREEN:SCREEN_5}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border-b border-white/5">SECURITY CONSULTATION</a><a href="{{DATA:SCREEN:SCREEN_34}}" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors">ASSISTANCE &amp; TRAINING</a></div>
+<div class="md:col-span-8 glass-panel p-10 relative overflow-hidden group">
+<h3 class="font-headline-md text-headline-md text-white mb-2">Additional Command Protocols</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Quickly switch between our other dedicated technical defensive branches to secure individual divisions of your network architecture footprint.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+  <a href="consultation.html" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border border-white/10 text-center flex-1">SECURITY CONSULTATION</a>
+  <a href="training.html" class="px-6 py-3 text-label-sm font-label-mono hover:bg-primary/10 hover:text-primary transition-colors border border-white/10 text-center flex-1">ASSISTANCE &amp; TRAINING</a>
+</div>
 </div>
 </div>
 </section>
-<!-- Command Center Visual Section -->
+
 <section class="py-24 bg-surface-container-lowest relative overflow-hidden">
 <div class="px-margin-desktop max-w-container-max mx-auto relative z-10">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -277,12 +293,11 @@
 </div>
 </div>
 </div>
-
 </div>
 <div class="relative glass-panel p-4 group">
 <div class="absolute inset-0 border-2 border-primary-container/20 translate-x-4 translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform"></div>
 <div class="aspect-video bg-surface relative overflow-hidden">
-
+<img src="screen.png" class="w-full h-full object-cover opacity-40" alt="Command Center Grid background">
 <div class="absolute bottom-4 left-4 right-4 p-4 glass-panel flex justify-between items-center">
 <div class="font-label-mono text-[10px] text-secondary-fixed">SYSTEM STATUS: NOMINAL</div>
 <div class="flex gap-1">
@@ -296,19 +311,19 @@
 </div>
 </div>
 </section>
-<!-- CTA Section -->
+
 <section class="py-24 text-center px-margin-mobile">
 <div class="max-w-3xl mx-auto glass-panel p-16 border-primary-container/20">
 <h2 class="font-headline-lg text-headline-lg mb-6">Ready to fortify your perimeter?</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-10">Connect with our intelligence officers to deploy your dedicated monitoring shield within 24 hours.</p>
 <div class="flex flex-col sm:flex-row justify-center gap-4">
-<button class="bg-primary-container text-on-primary-container font-label-mono text-label-mono px-10 py-4 font-bold shadow-[0_0_15px_rgba(255,82,92,0.3)]" onclick="window.location.href='{{DATA:SCREEN:SCREEN_41}}'">CONSULT SPECIALIST</button>
-<button class="border border-secondary-fixed text-secondary-fixed font-label-mono text-label-mono px-10 py-4 font-bold hover:bg-secondary-fixed/10 transition-colors" onclick="window.location.href='{{DATA:SCREEN:SCREEN_52}}'">VIEW ALL SOLUTIONS</button>
+<a href="deploy_defense.html" class="bg-primary-container text-on-primary-container font-label-mono text-label-mono px-10 py-4 font-bold shadow-[0_0_15px_rgba(255,82,92,0.3)] text-center">CONSULT SPECIALIST</a>
+<a href="advanced_safety.html" class="border border-secondary-fixed text-secondary-fixed font-label-mono text-label-mono px-10 py-4 font-bold hover:bg-secondary-fixed/10 transition-colors text-center">VIEW ALL SOLUTIONS</a>
 </div>
 </div>
 </section>
 </main>
-<!-- Footer Shell -->
+
 <footer class="bg-surface-container-lowest dark:bg-surface-container-lowest py-12 border-t border-white/5">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
 <div class="col-span-1 md:col-span-2">
@@ -320,9 +335,9 @@
 </div>
 <div class="flex flex-col gap-4">
 <h5 class="font-label-mono text-label-mono text-primary font-bold uppercase mb-2">Command Center</h5>
-<a class="text-tertiary-fixed-dim hover:text-primary-container transition-colors font-label-sm text-label-sm" href="#">System Status</a>
-<a class="text-tertiary-fixed-dim hover:text-primary-container transition-colors font-label-sm text-label-sm" href="#">Contact Command</a>
-<a class="text-tertiary-fixed-dim hover:text-primary-container transition-colors font-label-sm text-label-sm" href="#">Client Portal</a>
+<a class="text-tertiary-fixed-dim hover:text-primary-container transition-colors font-label-sm text-label-sm" href="about_us.html">About Agency</a>
+<a class="text-tertiary-fixed-dim hover:text-primary-container transition-colors font-label-sm text-label-sm" href="deploy_defense.html">Contact Command</a>
+<a class="text-tertiary-fixed-dim hover:text-primary-container transition-colors font-label-sm text-label-sm" href="consultation.html">Request Audit</a>
 </div>
 <div class="flex flex-col gap-4">
 <h5 class="font-label-mono text-label-mono text-primary font-bold uppercase mb-2">Protocols</h5>
@@ -332,20 +347,17 @@
 </div>
 </div>
 </footer>
+
 <script>
-        // Micro-interactions and atmospheric logic
         document.addEventListener('mousemove', (e) => {
             const panels = document.querySelectorAll('.glass-panel');
             panels.forEach(panel => {
                 const rect = panel.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
-                
-                // Subtle shine effect logic could be added here
             });
         });
 
-        // Simple typing effect for "data stream" decoration
         const streams = document.querySelectorAll('.data-stream');
         streams.forEach(stream => {
             setInterval(() => {
@@ -354,22 +366,4 @@
             }, 3000);
         });
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body></html>
