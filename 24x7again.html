@@ -5,7 +5,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Geist:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -16,448 +15,165 @@
                         "surface-container-low": "#1c1b1b",
                         "inverse-on-surface": "#313030",
                         "background": "#131313",
-                        "secondary-fixed-dim": "#00dbe7",
-                        "surface-container-highest": "#353534",
-                        "on-primary-fixed-variant": "#92001e",
-                        "primary": "#ffb3b2",
-                        "outline-variant": "#5f3e3e",
-                        "on-tertiary-fixed": "#1c1b1b",
-                        "on-tertiary-container": "#2a2a2a",
                         "on-primary-container": "#5b000f",
-                        "tertiary-fixed": "#e5e2e1",
-                        "on-surface": "#e5e2e1",
-                        "on-secondary-fixed-variant": "#004f54",
-                        "on-error-container": "#ffdad6",
-                        "surface-bright": "#3a3939",
-                        "surface-tint": "#ffb3b2",
-                        "outline": "#af8786",
-                        "on-tertiary": "#313030",
-                        "on-secondary-fixed": "#002022",
-                        "on-background": "#e5e2e1",
-                        "on-primary-fixed": "#410008",
-                        "primary-fixed-dim": "#ffb3b2",
-                        "tertiary-fixed-dim": "#c8c6c5",
                         "tertiary": "#c8c6c5",
-                        "secondary-container": "#00f1fe",
-                        "secondary": "#ddfcff",
-                        "secondary-fixed": "#74f5ff",
-                        "on-secondary-container": "#006a70",
-                        "inverse-surface": "#e5e2e1",
-                        "on-error": "#690005",
-                        "surface-container": "#201f1f",
-                        "primary-container": "#ff525c",
-                        "surface-dim": "#131313",
-                        "on-tertiary-fixed-variant": "#474746",
-                        "surface": "#131313",
+                        "primary-fixed-dim": "#ffb3b2",
                         "surface-container-high": "#2a2a2a",
-                        "error": "#ffb4ab",
-                        "error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#004f54",
                         "on-surface-variant": "#e9bcba",
-                        "surface-container-lowest": "#0e0e0e",
-                        "on-secondary": "#00363a",
-                        "tertiary-container": "#929090",
-                        "surface-variant": "#353534",
-                        "inverse-primary": "#bf002a",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "surface-tint": "#ffb3b2",
+                        "on-secondary-container": "#006a70",
                         "on-primary": "#680012",
-                        "cyber-red": "#ff003c"
+                        "on-tertiary": "#313030",
+                        "primary-container": "#ff525c",
+                        "outline-variant": "#5f3e3e",
+                        "on-secondary-fixed": "#002022",
+                        "on-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "secondary-fixed": "#74f5ff",
+                        "error-container": "#93000a",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-variant": "#353534",
+                        "outline": "#af8786",
+                        "surface-container": "#201f1f",
+                        "on-error": "#690005",
+                        "surface-bright": "#3a3939",
+                        "on-primary-fixed-variant": "#92001e",
+                        "error": "#ffb4ab",
+                        "secondary-container": "#00f1fe",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "tertiary-container": "#929090",
+                        "secondary": "#ddfcff",
+                        "primary": "#ffb3b2",
+                        "inverse-primary": "#bf002a",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-dim": "#131313",
+                        "secondary-fixed-dim": "#00dbe7",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-tertiary-container": "#2a2a2a",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-container-highest": "#353534"
                     },
                     "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
                         "full": "9999px"
                     },
                     "spacing": {
-                        "container-max": "1440px",
                         "base": "8px",
+                        "margin-mobile": "16px",
                         "margin-desktop": "64px",
-                        "gutter": "24px",
-                        "margin-mobile": "16px"
+                        "container-max": "1440px",
+                        "gutter": "24px"
                     },
                     "fontFamily": {
-                        "label-sm": ["Geist"],
-                        "label-mono": ["JetBrains Mono"],
-                        "body-md": ["Geist"],
-                        "body-lg": ["Geist"],
-                        "headline-xl": ["Space Grotesk"],
-                        "headline-lg-mobile": ["Space Grotesk"],
                         "headline-lg": ["Space Grotesk"],
-                        "headline-md": ["Space Grotesk"]
+                        "label-sm": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "body-md": ["Geist"],
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-md": ["Space Grotesk"],
+                        "headline-lg-mobile": ["Space Grotesk"],
+                        "headline-xl": ["Space Grotesk"]
                     },
                     "fontSize": {
-                        "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "600"}],
-                        "label-mono": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
-                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}]
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-mono": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
                     }
                 }
             }
-        }
+        };
     </script>
 <style>
-        body {
-            background-color: #131313;
-            color: #e5e2e1;
-            overflow-x: hidden;
-        }
-
+        body { background-color: #0a0a0a; color: #e5e2e1; }
         .glass-panel {
-            background: rgba(26, 26, 26, 0.6);
-            backdrop-filter: blur(12px);
+            background: rgba(26, 26, 26, 0.55);
+            backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
-        .glass-panel:hover {
-            border-color: rgba(255, 0, 60, 0.3);
-            background: rgba(26, 26, 26, 0.8);
-        }
-
         .cyber-grid {
-            background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
             background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
         }
-
-        .red-glow {
-            box-shadow: 0 0 20px rgba(255, 0, 60, 0.15);
-        }
-
-        .scan-line {
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #ff003c, transparent);
-            position: absolute;
-            top: 0;
-            left: -100%;
-            animation: scan 4s linear infinite;
-        }
-
-        @keyframes scan {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        .samurai-bracket::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 10px;
-            height: 10px;
-            border-top: 2px solid #ff003c;
-            border-left: 2px solid #ff003c;
-        }
-
-        .samurai-bracket::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 10px;
-            height: 10px;
-            border-bottom: 2px solid #ff003c;
-            border-right: 2px solid #ff003c;
-        }
+        .text-cyber-red { color: #ff525c; }
     </style>
 </head>
-<body class="font-body-md text-body-md">
-<!-- Global Background Shader -->
+<body class="cyber-grid min-h-screen flex flex-col justify-between selection:bg-primary-container selection:text-white antialiased">
 
-<div class="fixed inset-0 z-0 pointer-events-none cyber-grid"></div>
-<!-- Navigation -->
-<header class="fixed top-0 w-full bg-surface/80 backdrop-blur-xl border-b border-white/10 flex justify-between items-center h-20 px-margin-desktop z-50"><a class="font-headline-md text-headline-md font-bold tracking-tighter text-primary uppercase" href="{{DATA:SCREEN:SCREEN_39}}">RONIN TECH</a>
+<header class="fixed top-0 w-full bg-surface/80 backdrop-blur-xl border-b border-white/10 flex justify-between items-center h-20 px-margin-desktop z-50">
+<a href="home.html" class="font-headline-md text-headline-md font-bold tracking-tighter text-primary uppercase">RONIN TECH</a>
 <nav class="hidden md:flex gap-10 items-center">
     <div class="relative group">
-        <button class="font-body-md text-body-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 uppercase flex items-center gap-1">
+        <button class="font-body-md text-body-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 flex items-center gap-1">
             Services
-            <span class="material-symbols-outlined text-sm">expand_more</span>
+            <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
         </button>
-        <div class="absolute top-full left-0 mt-2 w-64 bg-surface-container-high border border-white/10 backdrop-blur-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-            <ul class="flex flex-col gap-4"><li class=""><a href="{{DATA:SCREEN:SCREEN_27}}" class="font-label-mono text-label-sm text-on-surface-variant hover:text-primary transition-colors uppercase">24/7 Monitoring</a></li><li class=""><a href="{{DATA:SCREEN:SCREEN_11}}" class="font-label-mono text-label-sm text-on-surface-variant hover:text-primary transition-colors uppercase">Secure Digital Marketing</a></li><li class=""><a href="{{DATA:SCREEN:SCREEN_35}}" class="font-label-mono text-label-sm text-on-surface-variant hover:text-primary transition-colors uppercase">Advanced Safety Products</a></li><li class=""><a href="{{DATA:SCREEN:SCREEN_5}}" class="font-label-mono text-label-sm text-on-surface-variant hover:text-primary transition-colors uppercase">Security Consultation</a></li><li class=""><a href="{{DATA:SCREEN:SCREEN_37}}" class="font-label-mono text-label-sm text-on-surface-variant hover:text-primary transition-colors uppercase">Assistance &amp; Training</a></li></ul>
+        <div class="absolute top-full right-0 mt-2 w-64 glass-panel border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+            <div class="flex flex-col py-2">
+                <a href="24x7 Monitoring.html" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-secondary-container hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-secondary-container">24/7 Monitoring</a>
+                <a href="DigitalMarketting.html" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary">Secure Digital Marketing</a>
+                <a href="advanced_safety.html" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-secondary-container hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-secondary-container">Advanced Safety Products</a>
+                <a href="consultation.html" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary">Security Consultation</a>
+                <a href="training.html" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-secondary-container hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-secondary-container">Assistance & Training</a>
+            </div>
         </div>
     </div>
-    <a class="font-body-md text-body-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 uppercase" href="{{DATA:SCREEN:SCREEN_7}}">About Us</a>
-    <button class="bg-primary-container text-on-primary-container px-6 py-2 font-bold hover:scale-95 duration-200 transition-transform uppercase tracking-widest" onclick="window.location.href='{{DATA:SCREEN:SCREEN_2}}'">Deploy Defense</button>
+    <a class="font-body-md text-body-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="about_us.html">About Us</a>
+    <a href="deploy_defense.html" class="bg-primary-container text-on-primary-container px-6 py-2 font-bold hover:scale-95 duration-200 transition-transform inline-block">Deploy Defense</a>
 </nav>
 <button class="md:hidden text-primary">
     <span class="material-symbols-outlined">menu</span>
 </button></header>
-<main class="relative z-10 pt-32 pb-24">
-<!-- Hero Section -->
-<section class="px-6 md:px-margin-desktop max-w-container-max mx-auto mb-32">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
-<div class="relative">
-<div class="inline-flex items-center gap-2 px-3 py-1 bg-cyber-red/10 border border-cyber-red/30 mb-6">
-<span class="w-2 h-2 rounded-full bg-cyber-red animate-pulse"></span>
-<span class="font-label-mono text-label-sm text-cyber-red uppercase tracking-tighter">System Status: Sovereign</span>
-</div>
-<h1 class="font-headline-xl text-headline-xl mb-6 leading-none">
-                        Sovereign Security. <br>
-<span class="text-cyber-red">End-to-End Resilience.</span>
-</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-8 leading-relaxed">
-                        Modern enterprises don't just face isolated attacks; they face persistent, multi-stage digital campaigns designed to exploit the gaps between disconnected security tools.
-                    </p>
-<div class="flex flex-wrap gap-4">
 
-
+<main class="flex-grow pt-32 pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10">
+<span class="w-1.5 h-1.5 bg-secondary-container animate-pulse shadow-[0_0_8px_#00f1fe]"></span>
+<span class="font-label-mono text-label-sm text-secondary-container uppercase tracking-widest">// SOVEREIGN_ENCLAVE_SHIELD</span>
 </div>
-</div>
-<div class="relative hidden lg:block h-[500px]">
-<div class="absolute inset-0 glass-panel rounded-none samurai-bracket overflow-hidden" style="--mouse-x: 213.0037841796875px; --mouse-y: 0.0055999755859375px;">
-
-<div class="scan-line"></div>
-</div>
-<div class="absolute -bottom-6 -right-6 glass-panel p-4 samurai-bracket flex flex-col gap-2" style="--mouse-x: 175.5914306640625px; --mouse-y: 44.78173828125px;">
-<div class="flex items-center gap-4 border-b border-white/5 pb-2">
-<span class="font-label-mono text-label-sm text-on-surface-variant">THREAT_LEVEL:</span>
-<span class="font-label-mono text-label-sm text-cyber-red">ZERO_TOLERANCE</span>
-</div>
-<div class="flex items-center gap-4">
-<span class="font-label-mono text-label-sm text-on-surface-variant">ACTIVE_SHIELD:</span>
-<span class="font-label-mono text-label-sm text-secondary-fixed-dim">ENABLED</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Narrative Section -->
-<section class="px-6 md:px-margin-desktop max-w-container-max mx-auto mb-32">
-<div class="glass-panel p-12 relative overflow-hidden" style="--mouse-x: 659.0074653625488px; --mouse-y: 494.01123046875px;">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-<div class="md:col-span-5 relative">
-<div class="w-full aspect-square relative flex items-center justify-center">
-
-<div class="absolute inset-0 flex items-center justify-center">
-<span class="material-symbols-outlined text-cyber-red text-6xl" data-weight="fill">security</span>
-</div>
-</div>
-</div>
-<div class="md:col-span-7">
-<h2 class="font-label-mono text-label-mono text-cyber-red uppercase mb-4 tracking-[0.2em]">Framework Architecture</h2>
-<h3 class="font-headline-lg text-headline-lg mb-6">Sentinel Defense Lineage™</h3>
-<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-                            Our proprietary, end-to-end cybersecurity framework creates an unbroken line of sight and defense across your entire digital history, infrastructure, and future scaling operations. By unifying data ingestion, real-time analytics, and automated response, we eliminate operational blind spots and guarantee absolute digital sovereignty.
-                        </p>
-</div>
-</div>
-</div>
-</section>
-<!-- Solutions Grid -->
-<section class="px-6 md:px-margin-desktop max-w-container-max mx-auto mb-40">
-<div class="mb-16">
-<h2 class="font-headline-lg text-headline-lg mb-2">Our Core Solutions &amp; Services</h2>
-<div class="h-1 w-24 bg-cyber-red"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-<!-- Card 1 -->
-<div class="glass-panel p-8 samurai-bracket flex flex-col group h-full" style="--mouse-x: 486.0074653625488px; --mouse-y: 139.348876953125px;">
-<div class="flex justify-between items-start mb-8">
-<div class="w-12 h-12 bg-cyber-red/10 flex items-center justify-center border border-cyber-red/30">
-<span class="material-symbols-outlined text-cyber-red" data-weight="fill">hub</span>
-</div>
-<span class="font-label-mono text-label-sm text-on-surface-variant/40">01 / LINEAGE</span>
-</div>
-<h4 class="font-headline-md text-headline-md mb-4 group-hover:text-cyber-red transition-colors">Unified Lineage Telemetry</h4>
-<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
-                        Bridge the gaps between siloed applications. Continuous ingestion ensures no data point is left unprotected.
-                    </p>
-<ul class="space-y-3 font-label-mono text-label-sm uppercase text-on-surface">
-<li class="flex items-center gap-3">
-<span class="w-1.5 h-1.5 bg-cyber-red"></span> Full-Stack Aggregation
-                        </li>
-<li class="flex items-center gap-3">
-<span class="w-1.5 h-1.5 bg-cyber-red"></span> Intelligent Noise Filtering
-                        </li>
-<li class="flex items-center gap-3">
-<span class="w-1.5 h-1.5 bg-cyber-red"></span> Historical Data Sovereignty
-                        </li>
-</ul>
-</div>
-<!-- Card 2 -->
-<div class="glass-panel p-8 samurai-bracket flex flex-col group h-full" style="--mouse-x: 89.0037841796875px; --mouse-y: 31.348876953125px;">
-<div class="flex justify-between items-start mb-8">
-<div class="w-12 h-12 bg-secondary-fixed-dim/10 flex items-center justify-center border border-secondary-fixed-dim/30">
-<span class="material-symbols-outlined text-secondary-fixed-dim" data-weight="fill">radar</span>
-</div>
-<span class="font-label-mono text-label-sm text-on-surface-variant/40">02 / OFFENSE</span>
-</div>
-<h4 class="font-headline-md text-headline-md mb-4 group-hover:text-secondary-fixed-dim transition-colors">Autonomous Threat Detection</h4>
-<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
-                        Don't just respond—anticipate. Proactive hunting across the behavioral matrix of your digital environment.
-                    </p>
-<ul class="space-y-3 font-label-mono text-label-sm uppercase text-on-surface">
-<li class="flex items-center gap-3">
-<span class="w-1.5 h-1.5 bg-secondary-fixed-dim"></span> Behavioral Matrix Analytics
-                        </li>
-<li class="flex items-center gap-3">
-<span class="w-1.5 h-1.5 bg-secondary-fixed-dim"></span> Proactive Threat Hunting
-                        </li>
-<li class="flex items-center gap-3">
-<span class="w-1.5 h-1.5 bg-secondary-fixed-dim"></span> Global Threat Intelligence
-                        </li>
-</ul>
-</div>
-<!-- Card 3 -->
-<div class="glass-panel p-8 samurai-bracket flex flex-col group h-full" style="--mouse-x: 526.0074653625488px; --mouse-y: 271.40869140625px;">
-<div class="flex justify-between items-start mb-8">
-<div class="w-12 h-12 bg-cyber-red/10 flex items-center justify-center border border-cyber-red/30">
-<span class="material-symbols-outlined text-cyber-red" data-weight="fill">bolt</span>
-</div>
-<span class="font-label-mono text-label-sm text-on-surface-variant/40">03 / RESPONSE</span>
-</div>
-<h4 class="font-headline-md text-headline-md mb-4 group-hover:text-cyber-red transition-colors">Orchestrated Incident Response</h4>
-<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
-                        Real-time containment and forensic reconstruction. Custom playbooks that trigger when milliseconds matter.
-                    </p>
-<ul class="space-y-3 font-label-mono text-label-sm uppercase text-on-surface">
-<li class="flex items-center gap-3">
-<span class="w-1.5 h-1.5 bg-cyber-red"></span> Automated Containment
-                        </li>
-<li class="flex items-center gap-3">
-<span class="w-1.5 h-1.5 bg-cyber-red"></span> Custom Response Playbooks
-                        </li>
-<li class="flex items-center gap-3">
-<span class="w-1.5 h-1.5 bg-cyber-red"></span> Forensic Reconstruction
-                        </li>
-</ul>
-</div>
-<!-- Card 4 -->
-<div class="glass-panel p-8 samurai-bracket flex flex-col group h-full" style="--mouse-x: 119.0037841796875px; --mouse-y: 15.40869140625px;">
-<div class="flex justify-between items-start mb-8">
-<div class="w-12 h-12 bg-secondary-fixed-dim/10 flex items-center justify-center border border-secondary-fixed-dim/30">
-<span class="material-symbols-outlined text-secondary-fixed-dim" data-weight="fill">shield</span>
-</div>
-<span class="font-label-mono text-label-sm text-on-surface-variant/40">04 / HARDENING</span>
-</div>
-<h4 class="font-headline-md text-headline-md mb-4 group-hover:text-secondary-fixed-dim transition-colors">Continuous Attack Hardening</h4>
-<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
-                        Map and secure your external perimeter. Continuous lifecycle management ensures permanent compliance.
-                    </p>
-<ul class="space-y-3 font-label-mono text-label-sm uppercase text-on-surface">
-<li class="flex items-center gap-3">
-<span class="w-1.5 h-1.5 bg-secondary-fixed-dim"></span> External Perimeter Mapping
-                        </li>
-<li class="flex items-center gap-3">
-<span class="w-1.5 h-1.5 bg-secondary-fixed-dim"></span> Lifecycle Vulnerability Management
-                        </li>
-<li class="flex items-center gap-3">
-<span class="w-1.5 h-1.5 bg-secondary-fixed-dim"></span> Compliance Alignment Dashboards
-                        </li>
-</ul>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="px-6 md:px-margin-desktop max-w-container-max mx-auto">
-<div class="relative py-24 overflow-hidden text-center glass-panel" style="--mouse-x: 60.00746536254883px; --mouse-y: 139.4609375px;">
-<div class="absolute inset-0 opacity-10 pointer-events-none">
-
-</div>
-<div class="relative z-10 max-w-3xl mx-auto px-6">
-<h2 class="font-headline-lg text-headline-lg mb-4">Secure Your Operational Lineage Today.</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
-                        Stop managing fractured security tools that don't talk to each other. Deploy Ronin Tech's unified defense framework and achieve absolute digital sovereignty.
-                    </p>
-
-<div class="mt-12 flex justify-center gap-8 opacity-50">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-label-sm">verified_user</span>
-<span class="font-label-mono text-label-sm uppercase">NIST Compliant</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-label-sm">security</span>
-<span class="font-label-mono text-label-sm uppercase">SOC2 Certified</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-surface-container-lowest py-16 border-t border-white/5 relative z-10">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-6 md:px-margin-desktop max-w-container-max mx-auto">
-<div class="col-span-1 lg:col-span-1">
-<a class="font-headline-sm text-headline-sm font-black text-on-surface mb-6 inline-block uppercase" href="#">RONIN TECH</a>
-<p class="font-body-md text-body-md text-tertiary-fixed-dim/60 mb-6">
-                    Forging digital resilience through cinematic precision and elite engineering.
+<h1 class="font-headline-lg-mobile md:font-headline-xl text-white tracking-tight font-bold leading-none">Data Sovereignty</h1>
+<p class="font-body-lg text-on-surface-variant">
+                    Isolate critical digital core intelligence assets within state-level compliant architectures. Complete data authority across cross-border framework partitions.
                 </p>
-</div>
-<div>
-<h5 class="font-label-mono text-label-sm text-on-surface uppercase mb-6 tracking-widest">Solutions</h5>
-<ul class="flex flex-col gap-3">
-<li class=""><a class="font-label-sm text-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors uppercase" href="#">Sentinel Lineage</a></li>
-<li class=""><a class="font-label-sm text-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors uppercase" href="#">Behavioral Matrix</a></li>
-<li class=""><a class="font-label-sm text-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors uppercase" href="#">Response Orchestration</a></li>
-</ul>
-</div>
-<div>
-<h5 class="font-label-mono text-label-sm text-on-surface uppercase mb-6 tracking-widest">Company</h5>
-<ul class="flex flex-col gap-3">
-<li class=""><a class="font-label-sm text-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors uppercase" href="#">Legal Documentation</a></li>
-<li class=""><a class="font-label-sm text-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors uppercase" href="#">Privacy Shield</a></li>
-<li class=""><a class="font-label-sm text-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors uppercase" href="#">Contact Command</a></li>
-</ul>
-</div>
-<div>
-<h5 class="font-label-mono text-label-sm text-on-surface uppercase mb-6 tracking-widest">Live Status</h5>
-<div class="flex items-center gap-2 mb-4">
-<div class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-pulse"></div>
-<span class="font-label-mono text-label-sm text-secondary-fixed-dim uppercase">All Systems Operational</span>
-</div>
-<div class="text-tertiary-fixed-dim/40 font-label-mono text-[10px] leading-tight uppercase">
-                    NODE: TOKYO-SEC-01<br>
-                    UPTIME: 99.9997%<br>
-                    LATENCY: 14MS
-                </div>
+<div class="pt-4">
+<a href="deploy_defense.html" class="bg-primary-container text-on-primary-container font-label-mono text-label-sm px-10 py-5 font-bold uppercase tracking-widest inline-block text-center shadow-[0_0_15px_rgba(255,82,92,0.2)]">
+                    Isolate Environment
+                </a>
 </div>
 </div>
-<div class="max-w-container-max mx-auto px-6 md:px-margin-desktop mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-<span class="font-label-sm text-label-sm text-tertiary-fixed-dim/40">© 2024 RONIN TECH. ALL RIGHTS RESERVED. PROTECTED BY DIGITAL BUSHIDO.</span>
+
+<div class="lg:col-span-7 glass-panel p-4 aspect-video relative overflow-hidden border border-white/5">
+<div class="w-full h-full bg-black/40 relative overflow-hidden">
+<img src="screen.png" class="w-full h-full object-cover opacity-30 filter saturate-50 contrast-125" alt="Sovereign security asset network topology mapping graphic layout background">
+<div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/80 to-transparent">
+<p class="font-label-mono text-[10px] text-secondary-fixed-dim uppercase tracking-widest mb-1">Enclave Encryption Protocol</p>
+<p class="font-headline-md text-[18px] text-white font-bold uppercase tracking-tight">DATA_PROTECTION_MATRIX: INTACT</p>
+</div>
+</div>
+</div>
+</main>
+
+<footer class="bg-surface-container-lowest py-12 border-t border-white/5 relative z-10 w-full">
+<div class="px-margin-desktop max-w-container-max mx-auto px-margin-mobile flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="space-y-1 text-center md:text-left">
+<span class="font-headline-sm font-bold text-white uppercase tracking-tighter">RONIN TECH</span>
+<p class="font-label-sm text-on-surface-variant uppercase text-[10px] tracking-wider">Independent Sovereign Infrastructure Security Network.</p>
+</div>
 <div class="flex gap-6">
-<a class="text-tertiary-fixed-dim/40 hover:text-cyber-red transition-colors" href="#"><span class="material-symbols-outlined text-lg">terminal</span></a>
-<a class="text-tertiary-fixed-dim/40 hover:text-cyber-red transition-colors" href="#"><span class="material-symbols-outlined text-lg">hub</span></a>
-<a class="text-tertiary-fixed-dim/40 hover:text-cyber-red transition-colors" href="#"><span class="material-symbols-outlined text-lg">public</span></a>
+<a class="text-tertiary-fixed-dim/40 hover:text-cyber-red transition-colors" href="about_us.html"><span class="material-symbols-outlined text-lg">terminal</span></a>
+<a class="text-tertiary-fixed-dim/40 hover:text-cyber-red transition-colors" href="deploy_defense.html"><span class="material-symbols-outlined text-lg">hub</span></a>
 </div>
 </div>
 </footer>
-<script>
-        // Micro-interaction for buttons
-        document.querySelectorAll('button').forEach(button => {
-            button.addEventListener('mouseenter', () => {
-                button.style.transform = 'translateY(-2px) scale(1.02)';
-            });
-            button.addEventListener('mouseleave', () => {
-                button.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Hover effect for glass panels to reveal subtle light movement
-        const panels = document.querySelectorAll('.glass-panel');
-        panels.forEach(panel => {
-            panel.addEventListener('mousemove', (e) => {
-                const rect = panel.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                panel.style.setProperty('--mouse-x', `${x}px`);
-                panel.style.setProperty('--mouse-y', `${y}px`);
-            });
-        });
-    </script>
-
-
-
-
-
-
-
-
-
-
 </body></html>
