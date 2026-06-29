@@ -5,7 +5,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Geist:wght@300;400;600&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <style>
         body {
             background-color: #0a0a0a;
@@ -16,254 +15,123 @@
         .glass-panel {
             background: rgba(26, 26, 26, 0.6);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 179, 178, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-
-        .neon-red-border {
-            border: 1px solid #ff525c;
-            box-shadow: 0 0 15px rgba(255, 82, 92, 0.2);
-        }
-
+        
         .cyber-grid {
             background-size: 40px 40px;
             background-image: 
-                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+                linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
         }
 
-        .scanning-line {
-            width: 100%;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #00f1fe, transparent);
-            position: absolute;
-            bottom: 0;
-            left: -100%;
-            transition: left 0.5s ease;
+        .glow-active {
+            border-color: #00f1fe !important;
+            box-shadow: 0 0 15px rgba(0, 241, 254, 0.2);
         }
 
-        input:focus ~ .scanning-line, 
-        textarea:focus ~ .scanning-line {
-            left: 100%;
-        }
-
-        .hud-bracket {
-            position: absolute;
-            width: 15px;
-            height: 15px;
-            border-color: #ff525c;
-        }
-
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        .bg-cyber-gradient {
+            background: linear-gradient(135deg, #131313 0%, #0e0e0e 100%);
         }
     </style>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "secondary-container": "#00f1fe",
-                      "inverse-primary": "#bf002a",
-                      "inverse-on-surface": "#313030",
-                      "outline": "#af8786",
-                      "on-tertiary": "#313030",
-                      "tertiary": "#c8c6c5",
-                      "on-tertiary-fixed": "#1c1b1b",
-                      "primary-fixed-dim": "#ffb3b2",
-                      "on-error": "#690005",
-                      "on-secondary-container": "#006a70",
-                      "on-background": "#e5e2e1",
-                      "primary": "#ffb3b2",
-                      "on-primary-fixed": "#410008",
-                      "tertiary-fixed-dim": "#c8c6c5",
-                      "on-surface-variant": "#e9bcba",
-                      "surface-bright": "#3a3939",
-                      "tertiary-container": "#929090",
-                      "surface": "#131313",
-                      "surface-variant": "#353534",
-                      "surface-container-lowest": "#0e0e0e",
-                      "on-primary": "#680012",
-                      "error-container": "#93000a",
-                      "on-secondary-fixed-variant": "#004f54",
-                      "surface-tint": "#ffb3b2",
-                      "primary-container": "#ff525c",
-                      "on-secondary-fixed": "#002022",
-                      "secondary-fixed": "#74f5ff",
-                      "inverse-surface": "#e5e2e1",
-                      "surface-container-highest": "#353534",
-                      "on-error-container": "#ffdad6",
-                      "tertiary-fixed": "#e5e2e1",
-                      "surface-container": "#201f1f",
-                      "outline-variant": "#5f3e3e",
-                      "surface-container-high": "#2a2a2a",
-                      "on-tertiary-container": "#2a2a2a",
-                      "primary-fixed": "#ffdad8",
-                      "secondary": "#ddfcff",
-                      "on-primary-container": "#5b000f",
-                      "on-surface": "#e5e2e1",
-                      "surface-container-low": "#1c1b1b",
-                      "surface-dim": "#131313",
-                      "secondary-fixed-dim": "#00dbe7",
-                      "background": "#131313",
-                      "on-tertiary-fixed-variant": "#474746",
-                      "on-secondary": "#00363a",
-                      "on-primary-fixed-variant": "#92001e",
-                      "error": "#ffb4ab"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.25rem",
-                      "lg": "0.5rem",
-                      "xl": "0.75rem",
-                      "full": "9999px"
-              },
-              "spacing": {
-                      "margin-mobile": "16px",
-                      "gutter": "24px",
-                      "container-max": "1440px",
-                      "base": "8px",
-                      "margin-desktop": "64px"
-              },
-              "fontFamily": {
-                      "body-md": ["Geist"],
-                      "label-sm": ["Geist"],
-                      "label-mono": ["JetBrains Mono"],
-                      "headline-md": ["Space Grotesk"],
-                      "headline-lg": ["Space Grotesk"],
-                      "body-lg": ["Geist"],
-                      "headline-xl": ["Space Grotesk"],
-                      "headline-lg-mobile": ["Space Grotesk"]
-              },
-              "fontSize": {
-                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                      "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "600"}],
-                      "label-mono": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
-                      "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
-                      "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                      "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}]
-              }
-            },
-          },
-        }
-    </script>
 </head>
-<body class="font-body-md text-on-surface selection:bg-primary-container selection:text-white">
-<!-- TopNavBar -->
-<header class="fixed top-0 w-full bg-surface/80 backdrop-blur-xl border-b border-white/10 flex justify-between items-center h-20 px-margin-desktop w-full z-50"><div class="font-headline-md text-headline-md font-bold tracking-tighter text-primary"><a href="{{DATA:SCREEN:SCREEN_39}}" class="">RONIN TECH</a></div><nav class="hidden md:flex gap-10 items-center"><div class="relative group"><button class="font-body-md text-body-md text-on-surface-variant font-medium flex items-center gap-1 hover:text-primary transition-colors duration-300">Services <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span></button><div class="absolute top-full right-0 mt-2 w-64 glass-panel border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"><div class="flex flex-col py-2"><a href="{{DATA:SCREEN:SCREEN_27}}" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary">24/7 Monitoring</a><a href="{{DATA:SCREEN:SCREEN_11}}" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary">Secure Digital Marketing</a><a href="{{DATA:SCREEN:SCREEN_35}}" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary">Advanced Safety Products</a><a href="{{DATA:SCREEN:SCREEN_5}}" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary">Security Consultation</a><a href="{{DATA:SCREEN:SCREEN_37}}" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary">Assistance &amp; Training</a></div></div></div><a class="font-body-md text-body-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_7}}">About Us</a><button class="bg-primary-container text-on-primary-container px-6 py-2 font-bold hover:scale-95 duration-200 transition-transform" onclick="window.location.href='{{DATA:SCREEN:SCREEN_2}}'">Deploy Defense</button></nav><button class="md:hidden text-primary"><span class="material-symbols-outlined">menu</span></button></header>
-<main class="relative pt-20 min-h-screen cyber-grid" style="background-position: 0.2px 1.9625px;">
-<!-- Background Asset -->
-<div class="absolute inset-0 z-0 opacity-20 pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLv_Dy5753Rk9QhbMB0Ix56g-yJWno7kPk_vJKlwVFHq6ew5AVDzNTi5FXe44sgWP1HJgNRzkoR3kPEQFg2yKlp2WOVSCDNg5fm7hJO74EiBZz04ngG4BfA2XPdDJhnqOQVWF1pMWBQP0_qYC21aAqLfw4H-91MFZSklfEVxWrcgq1RKwsiNK1LziaWcU6QacavHax4YcZDUuC5zhnzYoV2YFKcet0yNln6iYd_J1gK4nlsp1uTnnrT0kVQ'); background-size: cover; background-position: center;"></div>
-<!-- Hero Section -->
-<section class="relative z-10 px-margin-desktop pt-24 pb-12 text-center md:text-left max-w-container-max mx-auto">
-<div class="inline-flex items-center gap-2 mb-6 px-3 py-1 border border-primary/30 bg-primary/5">
-<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-<span class="font-label-mono text-label-sm text-primary uppercase tracking-widest">Awaiting Input</span>
+<body class="cyber-grid min-h-screen flex flex-col justify-between selection:bg-primary-container selection:text-white">
+
+<header class="fixed top-0 w-full bg-surface/80 backdrop-blur-xl border-b border-white/10 flex justify-between items-center h-20 px-margin-desktop z-50">
+<a href="home.html" class="font-headline-md text-headline-md font-bold tracking-tighter text-primary uppercase">RONIN TECH</a>
+<nav class="hidden md:flex gap-10 items-center">
+    <div class="relative group">
+        <button class="font-body-md text-body-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 flex items-center gap-1">
+            Services
+            <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+        </button>
+        <div class="absolute top-full right-0 mt-2 w-64 glass-panel border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+            <div class="flex flex-col py-2">
+                <a href="24x7 Monitoring.html" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-secondary-container hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-secondary-container">24/7 Monitoring</a>
+                <a href="DigitalMarketting.html" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary">Secure Digital Marketing</a>
+                <a href="advanced_safety.html" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-secondary-container hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-secondary-container">Advanced Safety Products</a>
+                <a href="consultation.html" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary">Security Consultation</a>
+                <a href="training.html" class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-secondary-container hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-secondary-container">Assistance & Training</a>
+            </div>
+        </div>
+    </div>
+    <a class="font-body-md text-body-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="about_us.html">About Us</a>
+    <a href="deploy_defense.html" class="bg-primary-container text-on-primary-container px-6 py-2 font-bold hover:scale-95 duration-200 transition-transform inline-block">Deploy Defense</a>
+</nav>
+<button class="md:hidden text-primary">
+    <span class="material-symbols-outlined">menu</span>
+</button></header>
+
+<main class="flex-grow flex items-center justify-center pt-32 pb-16 px-margin-mobile">
+<div class="w-full max-w-4xl glass-panel p-8 md:p-12 relative bg-cyber-gradient border border-white/5">
+<div class="absolute top-0 left-0 w-32 h-[2px] bg-gradient-to-r from-secondary-container to-transparent"></div>
+<div class="absolute top-0 left-0 w-[2px] h-32 bg-gradient-to-b from-secondary-container to-transparent"></div>
+
+<div class="mb-12 space-y-4">
+<div class="flex items-center gap-2 text-secondary-container font-label-mono text-label-sm tracking-widest uppercase">
+<span class="material-symbols-outlined text-sm animate-pulse">terminal</span>
+                    // ENCRYPTED_CHANNEL_INITIALIZATION
+                </div>
+<h1 class="font-headline-lg md:font-headline-xl text-white tracking-tight leading-none font-bold">Request Architecture Audit</h1>
+<p class="font-body-md text-on-surface-variant max-w-2xl">
+                    Configure your ecosystem metrics below. Submissions are parsed via isolated workflows to assign an executive security engineer to your domain.
+                </p>
 </div>
-<h1 class="font-headline-xl text-headline-xl text-white mb-6 leading-none">Initiate Strategic <br><span class="text-primary-container">Consultation</span></h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Secure your perimeter by briefing our intelligence officers. Protocol requires full disclosure for optimal offensive posturing.</p>
-</section>
-<!-- Mission Briefing Form -->
-<section class="relative z-10 px-margin-desktop pb-24 max-w-container-max mx-auto">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-<!-- Left Decorative HUD Element -->
-<div class="hidden lg:flex lg:col-span-3 flex-col justify-between py-12">
-<div class="glass-panel p-6 relative">
-<div class="hud-bracket top-0 left-0 border-t-2 border-l-2"></div>
-<div class="hud-bracket bottom-0 right-0 border-b-2 border-r-2"></div>
-<div class="font-label-mono text-label-sm text-primary mb-4">SYSTEM STATS</div>
-<div class="space-y-4">
-<div>
-<div class="flex justify-between text-[10px] mb-1">
-<span class="">ENCRYPTION</span>
-<span class="">256-BIT</span>
+
+<form action="#" class="space-y-8" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2 border-b border-white/10 pb-2 transition-all">
+<label class="block font-label-mono text-label-sm text-on-surface-variant uppercase tracking-wider">Operational Node Name</label>
+<input class="w-full bg-transparent border-0 text-white p-2 focus:ring-0 font-body-md placeholder:text-white/20" placeholder="Full Name / Representative" required="" type="text">
 </div>
-<div class="w-full bg-surface-variant h-1">
-<div class="bg-secondary-container h-full w-[88%]"></div>
-</div>
-</div>
-<div>
-<div class="flex justify-between text-[10px] mb-1">
-<span class="">CONNECTION</span>
-<span class="">STABLE</span>
-</div>
-<div class="w-full bg-surface-variant h-1">
-<div class="bg-primary-container h-full w-[95%]"></div>
-</div>
-</div>
-</div>
-</div>
-<div class="mt-8 flex items-center gap-4 text-on-surface-variant/40">
-<span class="material-symbols-outlined text-[40px]">shield_lock</span>
-<div class="font-label-mono text-[10px] leading-tight">
-                            DATA TRANSMISSION SECURED VIA <br>
-                            QUANTUM ENTANGLEMENT PROTOCOL
-                        </div>
-</div>
-</div>
-<!-- Form Panel -->
-<div class="lg:col-span-9">
-<div class="glass-panel neon-red-border p-8 md:p-12 relative overflow-hidden">
-<!-- Corner Crosshairs -->
-<div class="absolute top-4 left-4 text-primary opacity-50"><span class="material-symbols-outlined">add</span></div>
-<div class="absolute top-4 right-4 text-primary opacity-50"><span class="material-symbols-outlined">add</span></div>
-<div class="absolute bottom-4 left-4 text-primary opacity-50"><span class="material-symbols-outlined">add</span></div>
-<div class="absolute bottom-4 right-4 text-primary opacity-50"><span class="material-symbols-outlined">add</span></div>
-<div class="flex items-center gap-3 mb-8">
-<span class="material-symbols-outlined text-primary">terminal</span>
-<h2 class="font-headline-md text-headline-md text-white tracking-tight">Mission Briefing</h2>
-</div>
-<form class="space-y-10" onsubmit="event.preventDefault(); alert('Briefing Deployed Successfully.');">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-<!-- Operator Name -->
-<div class="relative">
-<label class="block font-label-mono text-label-sm text-primary mb-2 uppercase">Operator Name</label>
-<input class="w-full bg-surface-container-lowest border-0 border-b border-secondary-container/30 focus:ring-0 focus:border-secondary-container py-3 text-white placeholder-on-tertiary-fixed-variant transition-all" placeholder="John Doe" required="" type="text">
-<div class="scanning-line"></div>
-</div>
-<!-- Secure Channel -->
-<div class="relative">
-<label class="block font-label-mono text-label-sm text-primary mb-2 uppercase">Secure Channel</label>
-<input class="w-full bg-surface-container-lowest border-0 border-b border-secondary-container/30 focus:ring-0 focus:border-secondary-container py-3 text-white placeholder-on-tertiary-fixed-variant transition-all" placeholder="operator@secure.link" required="" type="email">
-<div class="scanning-line"></div>
-</div>
-<!-- Organization -->
-<div class="relative md:col-span-2">
-<label class="block font-label-mono text-label-sm text-primary mb-2 uppercase">Organization</label>
-<input class="w-full bg-surface-container-lowest border-0 border-b border-secondary-container/30 focus:ring-0 focus:border-secondary-container py-3 text-white placeholder-on-tertiary-fixed-variant transition-all" placeholder="Global Defense Initative" required="" type="text">
-<div class="scanning-line"></div>
-</div>
-<!-- Mission Objectives -->
-<div class="relative md:col-span-2">
-<label class="block font-label-mono text-label-sm text-primary mb-2 uppercase">Mission Objectives</label>
-<textarea class="w-full bg-surface-container-lowest border-0 border-b border-secondary-container/30 focus:ring-0 focus:border-secondary-container py-3 text-white placeholder-on-tertiary-fixed-variant transition-all resize-none" placeholder="Briefing details regarding perimeter vulnerabilities..." required="" rows="4"></textarea>
-<div class="scanning-line"></div>
+<div class="space-y-2 border-b border-white/10 pb-2 transition-all">
+<label class="block font-label-mono text-label-sm text-on-surface-variant uppercase tracking-wider">Corporate Routing Node</label>
+<input class="w-full bg-transparent border-0 text-white p-2 focus:ring-0 font-body-md placeholder:text-white/20" placeholder="alias@domain.com" required="" type="email">
 </div>
 </div>
-<div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-6">
-<div class="flex items-center gap-2 text-on-surface-variant font-label-mono text-label-sm italic">
-<span class="material-symbols-outlined text-[16px] animate-spin">sync</span>
-                                    SYNCING WITH RONIN MAINNET...
-                                </div>
-<button class="group relative px-10 py-4 bg-primary-container text-white font-bold tracking-widest uppercase transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,82,92,0.6)] active:scale-95" type="submit">
-                                    DEPLOY BRIEFING
-                                </button>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2 border-b border-white/10 pb-2 transition-all">
+<label class="block font-label-mono text-label-sm text-on-surface-variant uppercase tracking-wider">Ecosystem Segment</label>
+<select class="w-full bg-[#0e0e0e] border-0 text-on-surface-variant p-2 focus:ring-0 font-body-md">
+<option value="enterprise">Enterprise Core Infrastructure</option>
+<option value="cloud">Cloud / Hybrid Architecture</option>
+<option value="smb">Commercial Operation Network</option>
+<option value="gov">Sovereign Data Storage Hub</option>
+</select>
+</div>
+<div class="space-y-2 border-b border-white/10 pb-2 transition-all">
+<label class="block font-label-mono text-label-sm text-on-surface-variant uppercase tracking-wider">Urgency Directive</label>
+<select class="w-full bg-[#0e0e0e] border-0 text-on-surface-variant p-2 focus:ring-0 font-body-md">
+<option value="standard">Routine Analysis (Within 48hrs)</option>
+<option value="elevated">Elevated Vulnerability (Within 12hrs)</option>
+<option value="critical">Active Attack Matrix Breach (Immediate)</option>
+</select>
+</div>
+</div>
+
+<div class="space-y-2 border-b border-white/10 pb-2 transition-all">
+<label class="block font-label-mono text-label-sm text-on-surface-variant uppercase tracking-wider">Infrastructure Parameters Configuration</label>
+<textarea class="w-full bg-transparent border-0 text-white p-2 focus:ring-0 font-body-md h-32 placeholder:text-white/20" placeholder="Provide environmental vectors, cloud configurations, endpoint counts, or historical threat anomalies..."></textarea>
+</div>
+
+<div class="pt-4">
+<button class="w-full bg-secondary-container text-on-secondary-container font-label-mono text-label-sm font-bold py-5 uppercase tracking-widest shadow-[0_0_20px_rgba(0,241,254,0.15)] hover:scale-[1.01] duration-300 transition-transform flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-sm">rocket_launch</span>
+                    Open Communications Stream
+                </button>
 </div>
 </form>
 </div>
-</div>
-</div>
-</section>
 </main>
-<!-- Footer -->
-<footer class="w-full py-12 bg-surface-container-lowest border-t border-white/5">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-desktop max-w-container-max mx-auto">
-<div class="flex flex-col gap-4">
-<div class="font-headline-md text-headline-md text-on-surface font-bold tracking-tighter">RONIN TECH</div>
-<p class="font-label-mono text-label-sm text-on-tertiary-fixed-variant">© 2024 RONIN TECH. ALL RIGHTS RESERVED. PROTOCOL SECURED.</p>
-</div>
-<div class="flex flex-wrap md:justify-end gap-x-8 gap-y-4 items-center">
+
+<footer class="bg-surface-container-lowest py-8 border-t border-white/5 relative z-10">
+<div class="px-margin-desktop max-w-container-max mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+<div class="text-label-sm text-on-surface-variant font-label-mono opacity-50">
+            © 2024 RONIN TECH. DIGITAL PROTECTION NETWORKS.
+        </div>
+<div class="flex gap-8 items-center">
 <a class="font-label-mono text-label-sm text-on-tertiary-fixed-variant hover:text-secondary-container transition-colors" href="#">Privacy Policy</a>
 <a class="font-label-mono text-label-sm text-on-tertiary-fixed-variant hover:text-secondary-container transition-colors" href="#">Terms of Engagement</a>
 <div class="flex items-center gap-2">
@@ -273,9 +141,9 @@
 </div>
 </div>
 </footer>
+
 <script>
-        // Micro-interaction for form inputs
-        const inputs = document.querySelectorAll('input, textarea');
+        const inputs = document.querySelectorAll('input, textarea, select');
         inputs.forEach(input => {
             input.addEventListener('focus', () => {
                 input.parentElement.classList.add('glow-active');
@@ -285,7 +153,6 @@
             });
         });
 
-        // Simple mouse movement parallax effect on the background
         document.addEventListener('mousemove', (e) => {
             const moveX = (e.clientX - window.innerWidth / 2) * 0.005;
             const moveY = (e.clientY - window.innerHeight / 2) * 0.005;
@@ -295,12 +162,4 @@
             }
         });
     </script>
-
-
-
-
-
-
-
-
 </body></html>
