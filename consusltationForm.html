@@ -55,20 +55,23 @@
                 </p>
 </div>
 
-<form action="#" class="space-y-6" method="POST">
+<form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+    <input type="hidden" name="access_key" value="f3442e2e-81f9-47a8-adad-8531cc769731">
+    <input type="hidden" name="subject" value="New Security Architecture Consultation Submission">
+
 <div class="space-y-2 border-b border-white/5 pb-2 transition-all">
 <label class="block font-label-mono text-label-sm text-on-surface-variant uppercase tracking-wider">Corporate Point of Contact</label>
-<input class="w-full bg-transparent border-0 text-white p-2 focus:ring-0 font-body-md placeholder:text-white/20" placeholder="Identity / Officer Name" required="" type="text">
+<input class="w-full bg-transparent border-0 text-white p-2 focus:ring-0 font-body-md placeholder:text-white/20" name="officer_name" placeholder="Identity / Officer Name" required type="text">
 </div>
 
 <div class="space-y-2 border-b border-white/5 pb-2 transition-all">
 <label class="block font-label-mono text-label-sm text-on-surface-variant uppercase tracking-wider">Secure Communication Hub</label>
-<input class="w-full bg-transparent border-0 text-white p-2 focus:ring-0 font-body-md placeholder:text-white/20" placeholder="corporate_node@domain.com" required="" type="email">
+<input class="w-full bg-transparent border-0 text-white p-2 focus:ring-0 font-body-md placeholder:text-white/20" name="officer_email" placeholder="corporate_node@domain.com" required type="email">
 </div>
 
 <div class="space-y-2 border-b border-white/5 pb-2 transition-all">
 <label class="block font-label-mono text-label-sm text-on-surface-variant uppercase tracking-wider">Ecosystem Framework Sector</label>
-<select class="w-full bg-[#141212] border-0 text-on-surface-variant p-2 focus:ring-0 font-body-md">
+<select class="w-full bg-[#141212] border-0 text-on-surface-variant p-2 focus:ring-0 font-body-md" name="framework_sector" required>
 <option value="enterprise_cloud">Multi-Cloud Enterprise Network</option>
 <option value="on_premise">Isolated Local On-Premise Core</option>
 <option value="hybrid_system">Sovereign Data Storage Hybrid Framework</option>
@@ -106,18 +109,6 @@
             input.addEventListener('blur', () => {
                 input.parentElement.classList.remove('glow-active');
             });
-        });
-
-        document.querySelector('form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = e.target.querySelector('button');
-            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">refresh</span> INITIALIZING...';
-            btn.disabled = true;
-
-            setTimeout(() => {
-                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> PROTOCOL INITIATED';
-                alert('Secure handshake complete. An architect will contact you via your corporate node within 140 minutes.');
-            }, 2500);
         });
     </script>
 </body></html>
