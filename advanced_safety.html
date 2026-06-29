@@ -4,8 +4,8 @@
 <title>RONIN TECH | Advanced Safety Products</title>
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Geist:wght@400;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Geist:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
         tailwind.config = {
@@ -62,9 +62,9 @@
                         "on-secondary-fixed-variant": "#004f54"
                     },
                     "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
                         "full": "9999px"
                     },
                     "spacing": {
@@ -141,9 +141,10 @@
         }
     </style>
 </head>
-<body class="font-body-md text-body-md overflow-x-hidden selection:bg-primary-container selection:text-white bg-grid-pattern">
+<body class="font-body-md text-body-md overflow-x-hidden selection:bg-primary-container selection:text-white bg-grid-pattern min-h-screen flex flex-col justify-between">
+
 <header class="fixed top-0 w-full bg-surface/80 backdrop-blur-xl border-b border-white/10 flex justify-between items-center h-20 px-margin-desktop z-50">
-<a class="font-headline-md font-bold tracking-tighter text-primary uppercase" href="home.html">RONIN TECH</a>
+<a class="font-headline-md font-bold tracking-tighter text-primary uppercase" href="home">RONIN TECH</a>
 <nav class="hidden md:flex gap-10 items-center">
 <div class="relative group">
 <button class="font-body-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 flex items-center gap-1">
@@ -152,21 +153,38 @@
 </button>
 <div class="absolute top-full right-0 mt-2 w-72 glass-panel border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
 <div class="flex flex-col py-2">
-<a class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-secondary-container hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-secondary-container" href="24x7 Monitoring.html">24/7 Monitoring</a>
-<a class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary" href="DigitalMarketting.html">Secure Digital Marketing</a>
-<a class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-secondary-container hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-secondary-container" href="advanced_safety.html">Advanced Safety Products</a>
-<a class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary" href="consultation.html">Security Consultation</a>
-<a class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-secondary-container hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-secondary-container" href="training.html">Assistance & Training</a>
+<a class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-secondary-container hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-secondary-container" href="24x7 Monitoring">24/7 Monitoring</a>
+<a class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary" href="DigitalMarketting">Secure Digital Marketing</a>
+<a class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-secondary-container hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-secondary-container" href="advanced_safety">Advanced Safety Products</a>
+<a class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-primary hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary" href="consultation">Security Consultation</a>
+<a class="px-6 py-3 text-label-mono text-on-surface-variant hover:text-secondary-container hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-secondary-container" href="training">Assistance & Training</a>
 </div>
 </div>
 </div>
-<a class="font-body-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="about_us.html">About Us</a>
-<a class="bg-primary-container text-white px-6 py-2 font-bold hover:scale-95 duration-200 transition-transform inline-block cyber-red-glow" href="deploy_defense.html">DEPLOY DEFENSE</a>
+<a class="font-body-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="about_us">About Us</a>
+<a class="bg-primary-container text-white px-6 py-2 font-bold hover:scale-95 duration-200 transition-transform inline-block cyber-red-glow" href="deploy_defense">DEPLOY DEFENSE</a>
 </nav>
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined">menu</span>
+
+<button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none p-2 flex items-center justify-center">
+    <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
+
+<div id="mobile-dropdown-panel" class="absolute top-20 left-0 w-full bg-surface/95 border-b border-white/10 flex flex-col px-6 py-6 space-y-4 md:hidden opacity-0 pointer-events-none transition-all duration-300 transform -translate-y-2 z-40 backdrop-blur-xl">
+    <span class="font-label-mono text-[10px] text-primary/40 tracking-widest uppercase">// MOBILE_ACCESS_NODE</span>
+    <div class="flex flex-col border-l border-white/10 pl-4 space-y-3">
+        <span class="font-label-mono text-xs text-primary/60 tracking-wider uppercase">Services</span>
+        <a href="24x7 Monitoring" class="text-body-md text-on-surface-variant hover:text-primary">24/7 Monitoring</a>
+        <a href="DigitalMarketting" class="text-body-md text-on-surface-variant hover:text-primary">Secure Digital Marketing</a>
+        <a href="advanced_safety" class="text-body-md text-on-surface-variant hover:text-primary">Advanced Safety Products</a>
+        <a href="consultation" class="text-body-md text-on-surface-variant hover:text-primary">Security Consultation</a>
+        <a href="training" class="text-body-md text-on-surface-variant hover:text-primary">Assistance & Training</a>
+    </div>
+    <hr class="border-white/5">
+    <a class="text-body-md text-on-surface font-medium pt-1" href="about_us">About Us</a>
+    <button class="bg-primary-container text-on-primary-container text-center py-3 font-bold uppercase tracking-wider text-sm" onclick="window.location.href='deploy_defense'">Deploy Defense</button>
+</div>
 </header>
+
 <main class="flex-grow pt-32 pb-20">
 <section class="relative px-margin-desktop max-w-container-max mx-auto mb-24 overflow-hidden">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -181,6 +199,9 @@
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
                     Standard antivirus and basic firewalls are no longer enough. Ronin Tech deploys custom-tailored hardware and software solutions engineered to withstand aggressive attacks.
                 </p>
+<div class="flex flex-wrap gap-4 pt-4">
+
+</div>
 </div>
 <div class="relative">
 <div class="glass-panel p-6 relative overflow-hidden">
@@ -188,7 +209,7 @@
 <div class="hud-bracket-br"></div>
 <div class="scan-line"></div>
 <div class="aspect-video bg-black/60 relative border border-white/5 overflow-hidden">
-<img src="b.png" class="w-full h-full object-cover opacity-40" alt="Server infrastructure layout map background">
+<img alt="High-fidelity server room" class="w-full h-full object-cover mix-blend-lighten opacity-60" src="screen.jpeg">
 <div class="absolute inset-0 flex items-center justify-center">
 <span class="material-symbols-outlined text-8xl text-primary/30" style="font-variation-settings: 'FILL' 1;">verified_user</span>
 </div>
@@ -206,6 +227,7 @@
 </div>
 </div>
 </section>
+
 <section class="py-24 px-margin-desktop max-w-container-max mx-auto border-t border-white/5">
 <div class="mb-16">
 <h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Core Capabilities</h2>
@@ -258,6 +280,7 @@
 </div>
 </div>
 </section>
+
 <section class="py-24 px-margin-desktop max-w-container-max mx-auto border-t border-white/5">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 <div class="lg:col-span-7">
@@ -298,78 +321,70 @@
 <div class="flex gap-6 items-start group">
 <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center border border-primary text-primary font-bold group-hover:bg-primary group-hover:text-white transition-all">01</div>
 <div>
-<div class="font-headline-md text-headline-md text-on-surface mb-2">Dynamic Threat Adaptation</div>
+<h5 class="font-headline-md text-headline-md text-on-surface mb-2">Dynamic Threat Adaptation</h5>
 <p class="text-on-surface-variant">Our infrastructure evolves. Using real-time telemetry, systems automatically reconfigure to neutralize zero-day vulnerabilities.</p>
 </div>
 </div>
 <div class="flex gap-6 items-start group">
 <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center border border-secondary-fixed-dim text-secondary-fixed-dim font-bold group-hover:bg-secondary-fixed-dim group-hover:text-black transition-all">02</div>
 <div>
-<div class="font-headline-md text-headline-md text-on-surface mb-2">Hardened Silicon Roots</div>
+<h5 class="font-headline-md text-headline-md text-on-surface mb-2">Hardened Silicon Roots</h5>
 <p class="text-on-surface-variant">We utilize TPM and secure enclaves at the hardware level to ensure primary encryption keys are isolated from software-level attacks.</p>
 </div>
 </div>
 </div>
 <div class="p-8 bg-surface-container-high border-l-4 border-primary relative overflow-hidden group">
+<div class="absolute right-0 top-0 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-9xl -mr-10 -mt-10">format_quote</span>
+</div>
 <p class="italic text-on-surface font-body-lg relative z-10">"The transition to Ronin Tech's zero-trust hardware eliminated 94% of lateral movement threats in our data center within 30 days."</p>
 <p class="mt-4 font-label-mono text-label-sm text-primary uppercase relative z-10 tracking-widest">— CTO, Vanguard Dynamics</p>
 </div>
 </div>
 </div>
 </section>
+
 <section class="py-32 px-margin-desktop max-w-container-max mx-auto text-center relative">
 <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,0,60,0.1)_0%,transparent_70%)]"></div>
 <div class="relative z-10 max-w-3xl mx-auto">
 <h2 class="font-headline-xl text-headline-xl text-on-surface mb-8">Ready to Secure Your Future?</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Join the network of elite enterprises protected by Digital Bushido. Our specialists are ready to design your defense blueprint.</p>
 <div class="flex flex-col sm:flex-row gap-6 justify-center">
-  <a href="deploy_defense.html" class="bg-primary text-white font-label-mono text-label-sm uppercase tracking-widest px-10 py-5 font-bold shadow-[0_0_15px_rgba(255,0,62,0.3)] text-center">INITIALIZE BLUEPRINT</a>
-  <a href="consultation.html" class="border border-white/20 text-on-surface font-label-mono text-label-sm uppercase tracking-widest px-10 py-5 font-bold hover:bg-white/5 transition-colors text-center">TALK TO ARCHITECT</a>
 </div>
 </div>
 </section>
 </main>
-<footer class="bg-surface-container-lowest w-full py-16 border-t border-white/5">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
-<div class="space-y-6">
-<span class="font-headline-md font-bold text-on-surface block uppercase tracking-tighter">RONIN TECH</span>
-<p class="font-body-md text-on-surface-variant">Global leadership in elite cybersecurity solutions, driven by precision and the code of digital honor.</p>
-</div>
-<div class="space-y-4">
-<h6 class="font-label-mono text-on-surface uppercase font-bold tracking-widest opacity-50">Solutions</h6>
-<nav class="flex flex-col gap-3">
-<a class="font-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors" href="24x7 Monitoring.html">Digital Defense</a>
-<a class="font-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors" href="advanced_safety.html">Advanced Hardware</a>
-<a class="font-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors" href="DigitalMarketting.html">Threat Intel</a>
-</nav>
-</div>
-<div class="space-y-4">
-<h6 class="font-label-mono text-on-surface uppercase font-bold tracking-widest opacity-50">Company</h6>
-<nav class="flex flex-col gap-3">
-<a class="font-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors" href="about_us.html">About Ronin</a>
-<a class="font-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors" href="#">Privacy Shield</a>
-<div class="flex items-center gap-2 font-label-sm text-secondary-container">
-<div class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></div>
-                    Systems Operational
-                </div>
-</nav>
-</div>
-<div class="space-y-4">
-<h6 class="font-label-mono text-on-surface uppercase font-bold tracking-widest opacity-50">Resources</h6>
-<nav class="flex flex-col gap-3">
-<a class="font-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors" href="#">Whitepapers</a>
-<a class="font-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors" href="#">API Docs</a>
-<a class="font-label-sm text-tertiary-fixed-dim hover:text-primary transition-colors" href="training.html">Command Support</a>
-</nav>
-</div>
-</div>
-<div class="mt-16 px-margin-desktop max-w-container-max mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="font-label-sm text-on-surface-variant uppercase tracking-widest text-[10px]">
-            © 2024 RONIN TECH. ALL RIGHTS RESERVED. PROTECTED BY DIGITAL BUSHIDO.
-        </p>
-</div>
+
+<footer class="w-full py-8 border-t border-white/5 bg-transparent relative z-20">
+    <div class="px-margin-desktop max-w-container-max mx-auto px-margin-mobile flex flex-col sm:flex-row justify-between items-center gap-4 text-label-sm text-on-surface-variant">
+        <div class="opacity-40 font-label-mono text-[11px] tracking-wider uppercase">
+            © 2026 RONIN TECH. ALL RIGHTS RESERVED. PROTECTED BY DIGITAL BUSHIDO.
+        </div>
+        <div class="flex gap-6 font-label-mono text-[11px] opacity-40">
+            <span class="text-primary-container">// STATUS: SECURE</span>
+        </div>
+    </div>
 </footer>
+
 <script>
+    // Active Mobile Overlay Toggle Link Engine
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const dropdownPanel = document.getElementById('mobile-dropdown-panel');
+
+    menuBtn.addEventListener('click', () => {
+        const isHidden = dropdownPanel.classList.contains('opacity-0');
+        if (isHidden) {
+            dropdownPanel.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-2');
+            dropdownPanel.classList.add('opacity-100', 'translate-y-0');
+            menuBtn.innerHTML = '<span class="material-symbols-outlined text-3xl">close</span>';
+        } else {
+            dropdownPanel.classList.remove('opacity-100', 'translate-y-0');
+            dropdownPanel.classList.add('opacity-0', 'pointer-events-none', '-translate-y-2');
+            menuBtn.innerHTML = '<span class="material-symbols-outlined text-3xl">menu</span>';
+        }
+    });
+
+    // Terminal progress bar simulation logic
     const progressBar = document.getElementById('progress-bar');
     if (progressBar) {
         setInterval(() => {
@@ -383,6 +398,8 @@
             progressBar.style.width = width + '%';
         }, 3000);
     }
+
+    // Scroll effect for header
     window.addEventListener('scroll', () => {
         const header = document.querySelector('header');
         if (window.scrollY > 50) {
