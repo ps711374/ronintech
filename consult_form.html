@@ -3,7 +3,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Ronin Tech | Initiate Strategic Consultation</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Geist:wght@300;400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Geist:wght@300;400;600&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <style>
         body {
@@ -79,22 +79,25 @@
                 </p>
 </div>
 
-<form action="#" class="space-y-8" method="POST">
+<form action="https://api.web3forms.com/submit" method="POST" class="space-y-8">
+    <input type="hidden" name="access_key" value="f3442e2e-81f9-47a8-adad-8531cc769731">
+    <input type="hidden" name="subject" value="New Request Architecture Audit Submission">
+
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2 border-b border-white/10 pb-2 transition-all">
 <label class="block font-label-mono text-label-sm text-on-surface-variant uppercase tracking-wider">Operational Node Name</label>
-<input class="w-full bg-transparent border-0 text-white p-2 focus:ring-0 font-body-md placeholder:text-white/20" placeholder="Full Name / Representative" required="" type="text">
+<input class="w-full bg-transparent border-0 text-white p-2 focus:ring-0 font-body-md placeholder:text-white/20" name="node_name" placeholder="Full Name / Representative" required type="text">
 </div>
 <div class="space-y-2 border-b border-white/10 pb-2 transition-all">
 <label class="block font-label-mono text-label-sm text-on-surface-variant uppercase tracking-wider">Corporate Routing Node</label>
-<input class="w-full bg-transparent border-0 text-white p-2 focus:ring-0 font-body-md placeholder:text-white/20" placeholder="alias@domain.com" required="" type="email">
+<input class="w-full bg-transparent border-0 text-white p-2 focus:ring-0 font-body-md placeholder:text-white/20" name="routing_node" placeholder="alias@domain.com" required type="email">
 </div>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2 border-b border-white/10 pb-2 transition-all">
 <label class="block font-label-mono text-label-sm text-on-surface-variant uppercase tracking-wider">Ecosystem Segment</label>
-<select class="w-full bg-[#0e0e0e] border-0 text-on-surface-variant p-2 focus:ring-0 font-body-md">
+<select class="w-full bg-[#0e0e0e] border-0 text-on-surface-variant p-2 focus:ring-0 font-body-md" name="ecosystem_segment">
 <option value="enterprise">Enterprise Core Infrastructure</option>
 <option value="cloud">Cloud / Hybrid Architecture</option>
 <option value="smb">Commercial Operation Network</option>
@@ -103,7 +106,7 @@
 </div>
 <div class="space-y-2 border-b border-white/10 pb-2 transition-all">
 <label class="block font-label-mono text-label-sm text-on-surface-variant uppercase tracking-wider">Urgency Directive</label>
-<select class="w-full bg-[#0e0e0e] border-0 text-on-surface-variant p-2 focus:ring-0 font-body-md">
+<select class="w-full bg-[#0e0e0e] border-0 text-on-surface-variant p-2 focus:ring-0 font-body-md" name="urgency_directive">
 <option value="standard">Routine Analysis (Within 48hrs)</option>
 <option value="elevated">Elevated Vulnerability (Within 12hrs)</option>
 <option value="critical">Active Attack Matrix Breach (Immediate)</option>
@@ -113,7 +116,7 @@
 
 <div class="space-y-2 border-b border-white/10 pb-2 transition-all">
 <label class="block font-label-mono text-label-sm text-on-surface-variant uppercase tracking-wider">Infrastructure Parameters Configuration</label>
-<textarea class="w-full bg-transparent border-0 text-white p-2 focus:ring-0 font-body-md h-32 placeholder:text-white/20" placeholder="Provide environmental vectors, cloud configurations, endpoint counts, or historical threat anomalies..."></textarea>
+<textarea class="w-full bg-transparent border-0 text-white p-2 focus:ring-0 font-body-md h-32 placeholder:text-white/20" name="infrastructure_parameters" placeholder="Provide environmental vectors, cloud configurations, endpoint counts, or historical threat anomalies..."></textarea>
 </div>
 
 <div class="pt-4">
