@@ -5,17 +5,123 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Geist:wght@300;400;600&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#00dbe7",
+                        "secondary": "#ddfcff",
+                        "on-secondary-fixed": "#002022",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "surface-container-low": "#1c1b1b",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary": "#00363a",
+                        "on-tertiary": "#313030",
+                        "surface-bright": "#3a3939",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary-container": "#006a70",
+                        "outline-variant": "#5f3e3e",
+                        "on-primary-container": "#5b000f",
+                        "secondary-container": "#00f1fe",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-variant": "#353534",
+                        "surface-container-lowest": "#0e0e0e",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#74f5ff",
+                        "on-primary-fixed-variant": "#92001e",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#ffb3b2",
+                        "on-tertiary-container": "#2a2a2a",
+                        "inverse-primary": "#bf002a",
+                        "surface": "#131313",
+                        "on-surface-variant": "#e9bcba",
+                        "tertiary": "#c8c6c5",
+                        "tertiary-container": "#929090",
+                        "primary-container": "#ff525c",
+                        "on-primary-fixed": "#410008",
+                        "on-primary": "#680012",
+                        "surface-container-highest": "#353534",
+                        "primary-fixed": "#ffdad8",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "surface-dim": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "surface-tint": "#ffb3b2",
+                        "primary": "#ffb3b2",
+                        "background": "#131313",
+                        "surface-container": "#201f1f",
+                        "outline": "#af8786",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-fixed-variant": "#004f54"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Space Grotesk"],
+                        "label-sm": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "body-md": ["Geist"],
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-md": ["Space Grotesk"],
+                        "headline-lg-mobile": ["Space Grotesk"],
+                        "headline-xl": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-mono": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
 <style>
+        body {
+            background-color: #0a0a0a;
+            color: #e5e2e1;
+        }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        
+        /* Fixed: Removed the bad \n escape characters here */
         .cyber-grid {
-            background-image: \n                linear-gradient(to right, rgba(255, 179, 178, 0.05) 1px, transparent 1px), \n                linear-gradient(to bottom, rgba(255, 179, 178, 0.05) 1px, transparent 1px);\n            background-size: 50px 50px;\n            background-color: #0c0a0a;\n        }
-
-        .glass-panel {\n            background: rgba(20, 18, 18, 0.7);\n            backdrop-filter: blur(16px);\n            border: 1px solid rgba(255, 179, 178, 0.1);\n        }
-
-        .glow-active {\n            border-color: #ff525c !important;\n            box-shadow: 0 0 20px rgba(255, 82, 92, 0.2);\n        }\n    </style>
+            background-image: 
+                linear-gradient(to right, rgba(255, 82, 92, 0.02) 1px, transparent 1px), 
+                linear-gradient(to bottom, rgba(255, 82, 92, 0.02) 1px, transparent 1px);
+            background-size: 50px 50px;
+            background-color: #0c0a0a;
+        }
+        .glass-panel {
+            background: rgba(20, 18, 18, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 82, 92, 0.1);
+        }
+        .glow-active {
+            border-color: #ff525c !important;
+            box-shadow: 0 0 20px rgba(255, 82, 92, 0.2);
+        }
+    </style>
 </head>
 <body class="cyber-grid font-body-md text-on-surface selection:bg-primary-container selection:text-white min-h-screen flex flex-col justify-between">
 
@@ -91,7 +197,7 @@
 <footer class="bg-surface-container-lowest py-8 border-t border-white/5 relative z-10">
 <div class="px-margin-desktop max-w-container-max mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
 <div class="text-label-sm text-on-surface-variant font-label-mono opacity-50">
-            © 2024 RONIN TECH. SYSTEM INITIALIZATION PORTALS.
+            © 2026 RONIN TECH. SYSTEM INITIALIZATION PORTALS.
         </div>
 <div class="flex gap-4 items-center">
 <span class="font-label-mono text-label-sm text-primary">COMM_CHANNEL_ENCRYPTED</span>
